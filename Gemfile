@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'middleman'
+gem 'middleman-livereload'
+gem 'sassc'
+gem 'slim'
+gem 'middleman-dotenv'
+gem 'bourbon'
+gem 'builder'
+gem 'contentful_middleman', :git => 'https://github.com/contentful/contentful_middleman.git', :ref => '91e12afe297aacbc98a537ca42998d8a0a9db554'

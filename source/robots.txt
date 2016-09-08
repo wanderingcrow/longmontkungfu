@@ -1,0 +1,2 @@
+Host: www.longmontkungfu.com
+Sitemap: http://www.longmontkungfu.com/sitemap.xml
