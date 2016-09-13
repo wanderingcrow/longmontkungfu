@@ -3,6 +3,19 @@ nav.main-nav
   +position(fixed, 0 null null 0)
   z-index: 1
   background-color: $charcoal
+  color: $bone
   visibility: hidden
   +size(100%)
   +transition(visibility 0s 0.7s)
+
+  .navigation-is-open &
+    visibility: visible
+    +transition(visibility 0s 0s)
+    +transition-timing-function(cubic-bezier(.91,.01,.6,.99))
+
+
+.nav-trigger
+  +size(40px)
+  background-color: pink
+  +position(fixed, 10px 10px null null)
+  z-index: 3
