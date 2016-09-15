@@ -1,7 +1,44 @@
+body, input, button, select, textarea
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-smoothing: antialiased
+
+
 body
   font-family: $primary-font
   font-weight: $primary-font-weight
+  line-height: 1.4em
+  color: $charcoal
 
+
+
+// =========================================
+// headers
+// =========================================
 
 h1, h2, h3, h4, h5
   font-weight: $primary-font-weight
+  line-height: 1.2em
+
+h2
+  color: $verdant
+  font-size: 1.7rem
+  margin-bottom: 0.3em
+
+
+
+// =========================================
+// paragraphs
+// =========================================
+
+p
+  font-size: 16px
+  +margin(0 0 7px 0)
+  line-height: 1.3em
+
+  &:last-child
+    margin-bottom: 0
+
+
+p.lede
+  font-size: 1.25rem

@@ -1,0 +1,13 @@
+body.index
+
+  section.hero
+    background-image: image_url('home/hero-lg.jpg')
+
+    header
+      +position(absolute, null null $section-padding null)
+      +grid-third
+      color: rgba(white, 0.5)
+
+      img
+        max-width: 250px
+        margin-top: $global-padding*2

@@ -7,7 +7,6 @@ main
   height: 100vh
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
-  padding: 200px 5%
   position: relative
   z-index: 2
   +transition(transform 0.7s)
@@ -17,5 +16,16 @@ main
 
 
 .container
-  max-width: 850px
+  max-width: 830px
   +margin(null auto)
+
+
+// =========================================
+// sections
+// =========================================
+
+section
+  position: relative
+
+section.main-section
+  +padding($section-padding $side-padding)
