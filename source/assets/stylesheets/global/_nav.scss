@@ -1,0 +1,82 @@
+// =========================================
+// push screen nav
+// inspired by https://codyhouse.co/gem/full-screen-pushing-navigation/
+// =========================================
+
+nav.main-nav {
+  @include padding(200px 5%);
+  @include position(fixed, 0 null null 0);
+  z-index: 1;
+  background-color: $charcoal;
+  color: $bone;
+  visibility: hidden;
+  @include size(100%);
+  @include transition(visibility 0s 0.7s);
+
+  .navigation-is-open & {
+    visibility: visible;
+    @include transition(visibility 0s 0s);
+    @include transition-timing-function(cubic-bezier(.91,.01,.6,.99));
+  }
+
+  .primary-column {
+    @include grid-third;
+  }
+}
+
+
+
+// =========================================
+// nav icon button
+// =========================================
+
+.nav-trigger {
+  background-color: $charcoal;
+  @include position(fixed, $global-padding $global-padding null null);
+  z-index: 3;
+  color: $marigold;
+  padding: 7px 16px 10px 16px;
+  border-radius: $global-radius;
+  line-height: 1em;
+  border: 1px solid rgba(white, 0.1);
+  font-weight: 400;
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 0.75em;
+    color: rgba(white, 0.5);
+  }
+
+  &:hover {
+    color: white;
+    background-color: $pumpkin;
+  }
+}
+
+
+
+// =========================================
+// social nav
+// =========================================
+
+.social-nav {
+  li {
+    display: inline-block;
+    margin-right: 0.5em;
+    &:last-child { margin-right: 0; }
+  }
+
+  i {
+    border: 1px solid rgba(white, 0.1);
+    border-radius: $global-radius;
+    padding: 7px 10px;
+    @include transition(all, 0.2s);
+    color: rgba(white, 0.5);
+
+    &:hover {
+      background-color: rgba(white, 0.1);
+      @include transition(all, 0.2s);
+      color: white;
+    }
+  }
+}

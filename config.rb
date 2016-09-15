@@ -1,5 +1,12 @@
 require 'slim'
 
+# Reload the browser automatically whenever files change
+configure :development do
+  activate :livereload do |live|
+    live.livereload_css_target = "assets/stylesheets/all.css"
+  end
+end
+
 # Directories
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -16,13 +23,6 @@ after_build do |builder|
   dst = File.join(config[:build_dir],"_redirects")
   builder.thor.source_paths << File.dirname(__FILE__)
   builder.thor.copy_file(src,dst)
-end
-
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload do |live|
-    live.livereload_css_target = "assets/stylesheets/all.css"
-  end
 end
 
 # pretty URLs

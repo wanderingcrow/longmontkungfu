@@ -1,0 +1,57 @@
+footer.site-footer {
+  @include padding($section-padding null);
+  background-color: $charcoal;
+  @include dark-background;
+
+  p, li {
+    font-size: 0.9em;
+  }
+
+  a {
+    color: $neutral;
+
+    &:hover { color: $water; }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .branding,
+  .social {
+    @include grid-quarter;
+  }
+
+  .nav {
+    @include grid-half;
+    border-left: 1px solid rgba(white, 0.1);
+    border-right: 1px solid rgba(white, 0.1);
+    @include padding(null 2%);
+    @include margin(null 2%);
+
+    ul {
+      columns: 2;
+    }
+  }
+
+  ul.contact {
+    font-size: 0.9em;
+    margin-top: $global-padding;
+
+    li {
+      line-height: 1.5em;
+    }
+
+    i {
+      font-size: 0.8em;
+      color: rgba(white, 0.5);
+    }
+
+    .address {
+      border-top: 1px dashed rgba(white, 0.1);
+      padding-top: 7px;
+      margin-top: 7px;
+    }
+  }
+}

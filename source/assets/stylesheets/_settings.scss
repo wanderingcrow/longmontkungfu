@@ -1,0 +1,79 @@
+// =========================================
+// colors
+// =========================================
+
+$bone: #efefef;
+$charcoal: #2b2829;
+$neutral: #ccc;
+
+$pumpkin: #d25827;
+$glacier: #3fa2a8;
+$marigold: #d4a214;
+$azure: #334d5c;
+$twilight: #626172;
+$wine: #5a0839;
+$verdant: #9ca54a;
+$water: #79b1b3;
+$coffee: #868477;
+
+
+
+// =========================================
+// spacing
+// =========================================
+
+$section-padding: 60px;
+$global-padding: 20px;
+$side-padding: 7%;
+$global-radius: 2px;
+
+
+
+// =========================================
+// type
+// =========================================
+
+$primary-font: Lato, 'sans-serif';
+$primary-font-weight: 300;
+
+@mixin dark-background {
+  color: rgba(white, 0.5);
+
+  a {
+    color: $verdant;
+  }
+}
+
+
+
+// =========================================
+// media queries
+// =========================================
+
+$baby-bear: 414px;
+$mama-bear: 768px;
+
+
+
+// =========================================
+// grid mixins
+// =========================================
+
+@mixin grid-half {
+  @media (min-width: $mama-bear) {
+    width: 48%;
+  }
+}
+
+@mixin grid-third {
+  @media (min-width: $mama-bear) {
+    width: 31%;
+  }
+}
+
+@mixin grid-quarter {
+  width: 48%;
+  @media (min-width: $mama-bear) {
+    width: 23%;
+  }
+}
