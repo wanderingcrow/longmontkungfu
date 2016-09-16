@@ -1,11 +1,15 @@
 require 'slim'
 
+
+# the middleman-livereload extension isn't doing live style injection,
+# using http://livereload.com/ instead
+
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload do |live|
-    live.livereload_css_target = "assets/stylesheets/all.css"
-  end
-end
+# configure :development do
+#   activate :livereload do |live|
+#     live.livereload_css_target = "assets/stylesheets/all.css"
+#   end
+# end
 
 # Directories
 set :css_dir, 'assets/stylesheets'

@@ -53,7 +53,7 @@ a {
 
 p {
   font-size: 16px;
-  @include margin(0 0 7px 0);
+  @include margin(0 0 0.7em 0);
   line-height: 1.3em;
 
   &:last-child {

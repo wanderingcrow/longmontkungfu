@@ -29,12 +29,7 @@ html
       .container
         .primary-column
           = image_tag('logo.svg', :class => 'logo', :alt => 'Great Way Chinese Martial Arts')
-          ul.contact
-            li= link_to 'mailto:info@greatwaychinesemartialarts.com' do
-              i.fa.fa-envelope
-              | email us
-            li 303-651-2526
-            li.address 512 11th Ave <br>Longmont, CO 80501
+          = partial '/layouts/contact'
         .secondary-column
           = partial '/layouts/nav'
 
@@ -55,15 +50,6 @@ html
 
           .social
             = partial '/layouts/social'
-
-            ul.contact
-              li= link_to 'mailto:info@greatwaychinesemartialarts.com' do
-                i.fa.fa-envelope
-                | email us
-              li 303-651-2526
-              li.address 512 11th Ave <br>Longmont, CO 80501
-
-
-
+            = partial '/layouts/contact'
 
     = javascript_include_tag 'all'

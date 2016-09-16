@@ -13,11 +13,6 @@ footer.site-footer {
     &:hover { color: $water; }
   }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .branding,
   .social {
     @include grid-quarter;

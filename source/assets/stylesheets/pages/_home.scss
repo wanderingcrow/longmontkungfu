@@ -20,6 +20,7 @@ body.index {
   section.quote {
     background-color: $charcoal;
     @include padding($section-padding 0);
+    margin-bottom: $global-padding;
 
     blockquote {
       color: rgba(white, 0.5);

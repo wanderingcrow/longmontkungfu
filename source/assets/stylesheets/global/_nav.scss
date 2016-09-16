@@ -19,8 +19,48 @@ nav.main-nav {
     @include transition-timing-function(cubic-bezier(.91,.01,.6,.99));
   }
 
+  // the nav screen
+
+  .container {
+    max-width: 600px;
+  }
+
+  img.logo {
+    margin-bottom: $global-padding;
+  }
+
+  ul.contact {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color: rgba(white, 0.5);
+  }
+
   .primary-column {
-    @include grid-third;
+    @include grid-half;
+  }
+
+  .secondary-column {
+    @include grid-half;
+  }
+
+  .subgroup {
+    margin-bottom: $global-padding;
+    border: 1px solid rgba(white, 0.1);
+    border-radius: $global-radius;
+
+    &:last-of-type { margin-bottom: 0; }
+
+    li {
+      border-bottom: 1px dotted rgba(white, 0.05);
+      &:last-child { border-bottom: none; }
+
+      a {
+        display: block;
+        @include padding(2% 3%);
+
+        &:hover { background-color: rgba(white, 0.1); }
+      }
+    }
   }
 }
 

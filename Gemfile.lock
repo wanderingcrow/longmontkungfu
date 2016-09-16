@@ -40,11 +40,7 @@ GEM
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
-    em-websocket (0.5.1)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.0.1)
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.0.0)
@@ -107,10 +103,6 @@ GEM
     middleman-dotenv (2.0.0)
       dotenv (>= 2.0)
       middleman-core (>= 4.0)
-    middleman-livereload (3.4.6)
-      em-websocket (~> 0.5.1)
-      middleman-core (>= 3.3)
-      rack-livereload (~> 0.3.15)
     minitest (5.9.0)
     multi_json (1.12.1)
     padrino-helpers (0.13.3.1)
@@ -121,8 +113,6 @@ GEM
       activesupport (>= 3.1)
     parallel (1.9.0)
     rack (1.6.4)
-    rack-livereload (0.3.16)
-      rack
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -156,7 +146,6 @@ DEPENDENCIES
   contentful_middleman!
   middleman
   middleman-dotenv
-  middleman-livereload
   sassc
   slim
 

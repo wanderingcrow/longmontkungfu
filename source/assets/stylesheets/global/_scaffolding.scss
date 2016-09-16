@@ -1,0 +1,57 @@
+body {
+  background: white
+}
+
+main {
+  background: $bone;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 2;
+  @include transition(transform 0.7s);
+
+  .navigation-is-open & {
+    @include transform(translateX(100%));
+  }
+}
+
+
+.container {
+  max-width: 830px;
+  @include margin(null auto);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// =========================================
+// sections
+// =========================================
+
+section {
+  position: relative;
+}
+
+section.main-section {
+  @include padding($section-padding $side-padding);
+}
+
+
+
+// =========================================
+// misc
+// =========================================
+
+.map {
+  border-top: 1px solid $neutral;
+}
+
+// contact block in footer and nav (and etc)
+ul.contact {
+  .address {
+    margin-top: $global-padding/2;
+    padding-top: $global-padding/2;
+    border-top: 1px dashed rgba(white, 0.1);
+  }
+}
