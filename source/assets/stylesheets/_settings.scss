@@ -22,10 +22,18 @@ $coffee: #868477;
 // spacing
 // =========================================
 
-$section-padding: 65px;
-$global-padding: 20px;
-$side-padding: 7%;
-$global-radius: 2px;
+$section-padding: 65px !default;
+$global-padding: 20px !default;
+$side-padding: 7% !default;
+$global-radius: 2px !default;
+
+@mixin page-section {
+  @include padding($section-padding $side-padding);
+
+  &:nth-child(2n) {
+    background-color: white;
+  }
+}
 
 
 
@@ -33,8 +41,8 @@ $global-radius: 2px;
 // type
 // =========================================
 
-$primary-font: Lato, 'sans-serif';
-$primary-font-weight: 300;
+$primary-font: Lato, 'sans-serif' !default;
+$primary-font-weight: 300 !default;
 
 @mixin dark-background {
   color: rgba(white, 0.5);
@@ -53,33 +61,5 @@ $primary-font-weight: 300;
 $baby-bear: 414px;
 $mama-bear: 768px;
 
-
-
-// =========================================
-// grid mixins
-// =========================================
-
-@mixin grid-half {
-  @media (min-width: $mama-bear) {
-    width: 48%;
-  }
-}
-
-@mixin grid-third {
-  @media (min-width: $mama-bear) {
-    width: 31%;
-  }
-}
-
-@mixin grid-quarter {
-  width: 48%;
-  @media (min-width: $mama-bear) {
-    width: 23%;
-  }
-}
-
-@mixin grid-two-thirds {
-  @media (min-width: $mama-bear) {
-    width: 65%;
-  }
-}
+$medium-up: new-breakpoint(min-width $mama-bear);
+$medium-down: new-breakpoint(max-width $mama-bear);

@@ -6,12 +6,15 @@ body.index {
     align-items: center;
 
     header {
-      @include grid-half;
       color: rgba(white, 0.5);
 
       img {
         max-width: 250px;
         margin-top: $global-padding*2;
+      }
+
+      @include media($medium-up) {
+        @include span-columns(6);
       }
     }
   }
@@ -41,4 +44,22 @@ body.index {
 
   .paintbrush.top { top: -30px; }
   .paintbrush.bottom { bottom: -30px; }
+
+
+
+  section.what-we-do {
+    @include page-section;
+  }
+
+
+
+  section.get-started {
+    @include page-section;
+  }
+
+
+
+  section.testimonials {
+    @include page-section;
+  }
 }

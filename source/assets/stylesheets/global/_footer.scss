@@ -15,11 +15,15 @@ footer.site-footer {
 
   .branding,
   .social {
-    @include grid-quarter;
+    @include media($medium-up) {
+      @include span-columns(3);
+    }
   }
 
   .nav {
-    @include grid-half;
+    @include media($medium-up) {
+      @include span-columns(6);
+    }
     border-left: 1px solid rgba(white, 0.1);
     border-right: 1px solid rgba(white, 0.1);
     @include padding(null 2%);

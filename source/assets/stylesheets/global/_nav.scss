@@ -36,11 +36,15 @@ nav.main-nav {
   }
 
   .primary-column {
-    @include grid-half;
+    @include media($medium-up) {
+      @include span-columns(6);
+    }
   }
 
   .secondary-column {
-    @include grid-half;
+    @include media($medium-up) {
+      @include span-columns(6);
+    }
   }
 
   .subgroup {

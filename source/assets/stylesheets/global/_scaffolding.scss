@@ -33,10 +33,6 @@ section {
   position: relative;
 }
 
-section.main-section {
-  @include padding($section-padding $side-padding);
-}
-
 
 
 // =========================================
