@@ -46,7 +46,7 @@ section.testimonials
     article
       ul.testimonial-shuffle(data-orbit)
         - if Dir.exist?(config.data_dir)
-          - data.greatWay.testimonial.each do |id, testimonial|
+          - data.greatway.testimonial.each do |id, testimonial|
             li
               = Kramdown::Document.new(testimonial.testimonial).to_html
               footer= testimonial.author
