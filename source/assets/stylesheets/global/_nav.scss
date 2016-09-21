@@ -8,6 +8,9 @@ nav.main-nav {
   @include position(fixed, 0 null null 0);
   z-index: 1;
   background-color: $charcoal;
+  background-image: image_url('seal.png');
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
   color: $bone;
   visibility: hidden;
   @include size(100%);
