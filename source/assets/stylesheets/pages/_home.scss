@@ -1,12 +1,16 @@
 body.index {
 
   section.hero {
-    background-image: image_url('home/hero-lg.jpg');
     display: flex;
     align-items: center;
+    @include padding(null $side-padding);
+    position: relative;
+    height: 700px;
 
     header {
       color: rgba(white, 0.5);
+
+      h2 { color: $marigold; }
 
       img {
         max-width: 250px;
@@ -17,33 +21,73 @@ body.index {
         @include span-columns(6);
       }
     }
-  }
 
+    // hero images are on a random shuffle (see js)
+    .hero-bkgrnd {
+      @include position(absolute, 0 0 0 0);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      z-index: -1;
+      display: none;
+    }
 
-  section.quote {
-    background-color: $charcoal;
-    @include padding($section-padding 0);
-    margin-bottom: $global-padding;
+    .hero-1 {
+      background-image: image_url('home/hero-1-sm.jpg');
+      @include media($medium-up) {
+        background-image: image_url('home/hero-1.jpg');
+      }
+    }
 
-    blockquote {
-      color: rgba(white, 0.5);
+    .hero-2 {
+      background-image: image_url('home/hero-2-sm.jpg');
+      @include media($medium-up) {
+        background-image: image_url('home/hero-2.jpg');
+      }
+    }
 
-      footer { color: $marigold; }
+    .hero-3 {
+      background-image: image_url('home/hero-3-sm.jpg');
+      @include media($medium-up) {
+        background-image: image_url('home/hero-3.jpg');
+      }
     }
   }
 
 
-  .paintbrush {
-    background-image: image_url('home/paintbrush.png');
-    background-repeat: repeat-x;
-    background-size: cover;
-    width: 100%;
-    height: 80px;
-    position: absolute;
-  }
+  section.quote {
+    @include page-section($section-bkgrnd-color: $charcoal);
 
-  .paintbrush.top { top: -30px; }
-  .paintbrush.bottom { bottom: -30px; }
+    @include media($medium-up) {
+      @include padding($section-padding 0);
+      margin-bottom: $global-padding;
+    }
+
+    blockquote {
+      color: rgba(white, 0.5);
+      border-left: 0;
+      padding-left: 0;
+
+      footer { color: $marigold; }
+    }
+
+
+    .paintbrush {
+      background-image: image_url('home/paintbrush.png');
+      background-repeat: repeat-x;
+      background-size: cover;
+      width: 100%;
+      height: 80px;
+      position: absolute;
+
+      @include media($medium-down) {
+        display: none;
+      }
+    }
+
+    .paintbrush.top { top: -30px; }
+    .paintbrush.bottom { bottom: -30px; }
+  }
 
 
 
@@ -54,12 +98,62 @@ body.index {
 
 
   section.get-started {
-    @include page-section;
+    @include page-section($section-bkgrnd-color: $verdant);
+    @include dark-background;
+
+    .section-photo {
+      @include media($medium-up) {
+        background-repeat: no-repeat;
+        background-image: image_url('home/get-started.jpg');
+        background-size: cover;
+        @include size(50% 100%);
+        @include position(absolute, 0 0 0 null);
+      }
+    }
+
+    article {
+      @include media($medium-up) {
+        @include span-columns(5);
+      }
+    }
   }
 
 
 
   section.testimonials {
+    @include page-section;
+
+    footer {
+      font-size: 0.8em;
+    }
+
+    .slick-slider {
+      position: relative;
+      max-width: 100%;
+
+      &:before,
+      &:after {
+        font-size: 200px;
+        position: absolute;
+        top: 70%;
+        color: lighten($neutral, 5%);
+      }
+
+      &:before {
+        content: '\201C';
+        left: -90px;
+      }
+
+      &:after {
+        content: '\201D';
+        right: -90px;
+      }
+    }
+  }
+
+
+
+  section.subscribe {
     @include page-section;
   }
 }

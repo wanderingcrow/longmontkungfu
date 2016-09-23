@@ -1,22 +1,20 @@
-section.main.email-signup
-  .container
-    h2 Subscribe to our Newsletter
-    p Maybe once a month or so we put out a quick email that talks about upcoming events at the kwoon. We also use this list to warn you of last minute class cancellations (in the event of a snow cancellation, for instance).
+h2 Subscribe to our Newsletter
+p Maybe once a month or so we put out a quick email that talks about upcoming events at the kwoon. We also use this list to warn you of last minute class cancellations (in the event of a snow cancellation, for instance).
 
-    form#mc-embedded-subscribe-form.email-registration-form.validate(action='//greatwaychinesemartialarts.us10.list-manage.com/subscribe/post?u=5e0e06cdbecb5d8a3334986a7&amp;id=c8c292527c' method='post' name='mc-embedded-subscribe-form' autocomplete='on')
-      #mc_embed_signup_scroll
-        .container
-          .mc-name
-            input#mce-FNAME(type='text' placeholder='First Name' required='' name='FNAME')
-          .mc-name
-            input#mce-LNAME(type='text' placeholder='Last Name' required='' name='LNAME')
-          .mc-email
-            input#mce-EMAIL(type='email' placeholder='Email' required='' name='EMAIL')
-          .mc-button
-            button#subscribe.postfix(type='submit'): i.fa.fa-send
+form#mc-embedded-subscribe-form.email-registration-form(action='//greatwaychinesemartialarts.us10.list-manage.com/subscribe/post?u=5e0e06cdbecb5d8a3334986a7&amp;id=c8c292527c' method='post' name='mc-embedded-subscribe-form' autocomplete='on')
+  #mc_embed_signup_scroll
+  .inline-form-holder
+    .mc-name
+      input#mce-FNAME(type='text' placeholder='First Name' required='' name='FNAME')
+    .mc-name
+      input#mce-LNAME(type='text' placeholder='Last Name' required='' name='LNAME')
+    .mc-email
+      input#mce-EMAIL(type='email' placeholder='Email' required='' name='EMAIL')
+    .mc-button
+      button#subscribe.postfix(type='submit'): i.fa.fa-send
 
-      #mce-responses.clear
-      #mce-error-response.response style="display:none"
-      #mce-success-response.response style="display:none"
-      div style=("position: absolute; left: -5000px;")
-        input name="b_5e0e06cdbecb5d8a3334986a7_c8c292527c" tabindex="-1" type="text" value=""
+  #mce-responses.clear
+  #mce-error-response.response style="display:none"
+  #mce-success-response.response style="display:none"
+  div style=("position: absolute; left: -5000px;")
+    input name="b_5e0e06cdbecb5d8a3334986a7_c8c292527c" tabindex="-1" type="text" value=""

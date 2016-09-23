@@ -1,11 +1,92 @@
+$form-input-height: 40px;
+
+form {
+  display: block;
+
+  input[type="text"],
+  input[type="email"] {
+    height: $form-input-height;
+    border: 1px solid $neutral;
+    font-size: 0.9rem;
+    @include padding(null 0.4em);
+    color: $charcoal;
+  }
+
+  input {
+    background-color: white;
+    box-shadow: none;
+    font-weight: 300;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      background-color: $bone;
+    }
+  }
+
+  button {
+    border: none;
+    border-radius: 0;
+    color: white;
+    background-color: $water;
+    @include size($form-input-height);
+    @include transition(all, 0.2s);
+    line-height: $form-input-height;
+    font-size: 16px;
+    cursor: pointer;
+
+    @include media($medium-down) {
+      min-width: 50px;
+    }
+
+    &:hover {
+      background-color: darken($water, 10%);
+      @include transition(all, 0.2s);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    i {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  .inline-form-holder {
+    @include media($medium-up) {
+      display: flex;
+
+      input[type="text"],
+      input[type="email"] {
+        border-right: none;
+      }
+    }
+
+    @include media($medium-down) {
+      input {
+        margin-bottom: $global-padding/2;
+        border-radius: $global-radius;
+      }
+    }
+  }
+}
+
+
+
 // =========================================
 // sign up for our email list
 // =========================================
 
 .email-registration-form {
-  input[type="text"],
-  input[type="email"] {
-    border-right: none;
-    box-shadow: none;
+  margin-top: $global-padding;
+
+  .mc-name {
+    flex-grow: 1;
+  }
+
+  .mc-email {
+    flex-grow: 2;
   }
 }

@@ -1,6 +1,5 @@
 footer.site-footer {
-  @include padding($section-padding null);
-  background-color: $charcoal;
+  @include page-section($section-bkgrnd-color: $charcoal);
   @include dark-background;
 
   p, li {
@@ -15,22 +14,32 @@ footer.site-footer {
 
   .branding,
   .social {
+
+    img {
+      max-width: 250px;
+    }
+
     @include media($medium-up) {
       @include span-columns(3);
     }
   }
 
-  .nav {
+  .social {
+    @include media($medium-up) {
+      padding-left: 2%;
+    }
+  }
+
+  .nav-tree {
+    margin: $global-padding 0;
+
     @include media($medium-up) {
       @include span-columns(6);
-    }
-    border-left: 1px solid rgba(white, 0.1);
-    border-right: 1px solid rgba(white, 0.1);
-    @include padding(null 2%);
-    @include margin(null 2%);
-
-    ul {
       columns: 2;
+      border-left: 1px solid rgba(white, 0.1);
+      border-right: 1px solid rgba(white, 0.1);
+      margin: 0 2%;
+      padding: 0 2%;
     }
   }
 
@@ -45,12 +54,6 @@ footer.site-footer {
     i {
       font-size: 0.8em;
       color: rgba(white, 0.5);
-    }
-
-    .address {
-      border-top: 1px dashed rgba(white, 0.1);
-      padding-top: 7px;
-      margin-top: 7px;
     }
   }
 }

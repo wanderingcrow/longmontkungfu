@@ -25,8 +25,14 @@ h1, h2, h3, h4, h5 {
 
 h2 {
   color: $verdant;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin-bottom: 0.3em;
+}
+
+h3 {
+  color: $pumpkin;
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
 }
 
 
@@ -69,8 +75,11 @@ p.lede {
 
 blockquote {
   font-size: 1.3em;
-  line-height: 1.4em;
+  line-height: 1.3em;
   color: $coffee;
+  margin-bottom: 0.7em;
+  border-left: 1px solid $neutral;
+  padding-left: 0.75em;
 
   footer {
     font-size: 0.75em;

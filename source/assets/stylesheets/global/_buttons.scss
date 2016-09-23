@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: $water;
+  padding: 0.7em 0.9em;
+  line-height: 1em;
+  border: 1px solid rgba(white, 0.75);
+  border-radius: $global-radius;
+  font-size: 0.9em;
+  margin-top: $global-padding;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-white {
+  @extend .btn;
+  background-color: rgba(white, 0.1);
+
+  &:hover {
+    background-color: rgba(white, 0.4);
+  }
+}

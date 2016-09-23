@@ -1,21 +1,24 @@
 - @title = "Welcome"
 
 section.hero
+  .hero-bkgrnd.hero-1
+  .hero-bkgrnd.hero-2
+  .hero-bkgrnd.hero-3
   .container
     header
       h2 Kung fu is skill acquired through significant time and effort.
-      p.lede It could be any skill: architecture, teaching, whatever skill you want to shine at; in our case, we put the time and effort into martial arts.
+      p.lede It could be any skill: architecture, teaching, whatever skill you want to shine at; in our case, we put our time and effort into martial arts.
       = image_tag('logo.svg', :alt => 'Great Way Chinese Martial Arts')
 
 
 
 section.quote
   .paintbrush.top
+  .paintbrush.bottom
   .container
     blockquote
       | A gung fu man rests therein, and because he rests, he is at peace. Because he is at peace, he is quiet. One who is at peace and is quiet, no sorrow or harm can enter; therefore his inner power remains whole and his spirit intact.
       footer — Bruce Lee
-  .paintbrush.bottom
 
 
 
@@ -24,30 +27,34 @@ section.what-we-do
     article
       h2 What We Do
       p We focus on the whole person — training you in general fitness and martial arts to make you stronger. Stronger physically, stronger mentally. Martial arts isn’t just learning how to fight, it’s about learning to control yourself, and by extension, the world around you. These lessons translate to whatever your goals are: school, work, life — everything.
-      p Martial arts has the unique ability to bring its practitioners confidence, grace, and strength while also allowing you to learn to defend yourself (or others). It helps you achieve a quiet mind — a state which is increasingly important in our busy, multi-tasking, always-online world. Our practice offers the best of both worlds, teaching both the physical and spiritual aspects of martial art.
+      blockquote Martial arts has the unique ability to bring its practitioners confidence, grace, and strength while also allowing you to learn to defend yourself (or others).
+      p As an added bonus, kung fu and tai chi help you achieve a quiet mind — a state which is increasingly important in our busy, multi-tasking, always-online world. Our practice offers the best of both worlds, teaching both the physical and spiritual aspects of martial art.
 
 
 
 section.get-started
-  aside
+  .section-photo
   .container
     article
       h2 How to Get Started
       p A good first step is for the prospective student to meet with Sifu Keller. The meeting is free, informal, and helps us to understand what you'd like to achieve and helps you to understand more about us: our philosophy, our training style, a typical class.
       p During the meeting, if you're interested, we'll schedule your first class. Oftentimes, this is a private class and helps you to get acquainted with some of the basics (bowing at the start of class, basic technique, etc.). It's a stress-free way to get integrated at Great Way.
 
-      a.button.simple(href='/book-appointment') Book Appointment
+      a.btn-white(href='/book-appointment') Book Appointment
 
 
 
 section.testimonials
   .container
-    aside: .quote &ldquo;
-    article
-      ul.testimonial-shuffle(data-orbit)
-        - if Dir.exist?(config.data_dir)
-          - data.greatway.testimonial.each do |id, testimonial|
-            li
-              = Kramdown::Document.new(testimonial.testimonial).to_html
-              footer= testimonial.author
-    aside: .quote &rdquo;
+    .slick-slider
+      - if Dir.exist?(config.data_dir)
+        - data.greatway.testimonial.each do |id, testimonial|
+          .slide: .slide-content
+            = Kramdown::Document.new(testimonial.testimonial).to_html
+            footer= testimonial.author
+
+
+
+section.subscribe
+  .container
+    = partial '/layouts/emailSignup'

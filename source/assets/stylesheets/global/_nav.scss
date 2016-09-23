@@ -30,6 +30,7 @@ nav.main-nav {
 
   img.logo {
     margin-bottom: $global-padding;
+    max-width: 270px;
   }
 
   ul.contact {
@@ -40,12 +41,13 @@ nav.main-nav {
 
   .primary-column {
     @include media($medium-up) {
-      @include span-columns(6);
+      @include span-columns(5);
     }
   }
 
   .secondary-column {
     @include media($medium-up) {
+      @include shift(1);
       @include span-columns(6);
     }
   }

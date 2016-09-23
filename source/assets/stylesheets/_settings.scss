@@ -19,19 +19,20 @@ $coffee: #868477;
 
 
 // =========================================
-// spacing
+// spacing and sizes
 // =========================================
 
+$max-width: 830px;
 $section-padding: 65px !default;
 $global-padding: 20px !default;
 $side-padding: 7% !default;
 $global-radius: 2px !default;
 
-@mixin page-section {
+@mixin page-section($section-bkgrnd-color: white) {
   @include padding($section-padding $side-padding);
 
   &:nth-child(2n) {
-    background-color: white;
+    background-color: $section-bkgrnd-color;
   }
 }
 
@@ -45,10 +46,14 @@ $primary-font: Lato, 'sans-serif' !default;
 $primary-font-weight: 300 !default;
 
 @mixin dark-background {
-  color: rgba(white, 0.5);
+  color: rgba(white, 0.9);
+
+  h2 {
+    color: white;
+  }
 
   a {
-    color: $verdant;
+    color: white;
   }
 }
 

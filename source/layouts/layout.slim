@@ -11,11 +11,16 @@ html
     meta property='og:title' content='#{current_page.data.ogTitle}'
     title= @title + ' | Great Way Chinese Martial Arts' || 'Great Way Chinese Martial Arts'
 
+    = javascript_include_tag '//code.jquery.com/jquery-3.0.0.min.js'
+
+    / slick carousels
+    = stylesheet_link_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'
+    = stylesheet_link_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css'
+    = javascript_include_tag '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'
+
     / fonts
     script src="https://use.fontawesome.com/7da44d4118.js"
     = stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'
-
-    = javascript_include_tag '//code.jquery.com/jquery-3.0.0.min.js'
 
     = stylesheet_link_tag 'all'
 
@@ -38,7 +43,7 @@ html
       = yield
 
       .map
-        iframe width='100%' height='300px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/greatwaychinesemartialarts.13a339f9/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoiZ3JlYXR3YXljaGluZXNlbWFydGlhbGFydHMiLCJhIjoiNjZlNDgxZTdkODk0MjQ0ODIyNTI1MmExZDVkMzkyYjkifQ.Sp3bOcaI0BIR4V3nTzTdxQ'
+        iframe width='100%' height='300px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/greatwaychinesemartialarts.13a339f9/zoompan?access_token=pk.eyJ1IjoiZ3JlYXR3YXljaGluZXNlbWFydGlhbGFydHMiLCJhIjoiNjZlNDgxZTdkODk0MjQ0ODIyNTI1MmExZDVkMzkyYjkifQ.Sp3bOcaI0BIR4V3nTzTdxQ'
 
       footer.site-footer
         .container
