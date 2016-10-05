@@ -4,12 +4,20 @@ html
     meta charset='utf-8'
     meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'
     meta name='viewport' content='width=device-width, initial-scale=1'
-    meta name='description' content='#{current_page.data.description}'
-    meta property='og:image' content='#{current_page.data.ogImage}'
-    meta property='og:description' content='#{current_page.data.ogDescription}'
-    meta property='og:url' content='#{current_page.data.ogUrl}'
-    meta property='og:title' content='#{current_page.data.ogTitle}'
+
     title= @title + ' | Great Way Chinese Martial Arts' || 'Great Way Chinese Martial Arts'
+
+    / keywords and descriptions
+    meta content='#{ current_page.data.meta_description || config[:default_meta_description] }' name='description'
+    meta content='#{ current_page.data.meta_keywords || config[:default_meta_keywords] }' name='keywords'
+
+    / og/social stuff
+    meta property='og:type' content='website'
+    meta property='og:url' content='http://greatwaychinesemartialarts.com/'
+    meta property='og:title' content='#{ current_page.data.title || config[:default_title] }'
+    meta property='og:image' content='#{ current_page.data.meta_image || config[:default_meta_image] }'
+    meta property='og:description' content='#{ current_page.data.meta_description || config[:default_meta_description] }'
+    meta property='og:site_name' content='Great Way Chinese Martial Arts'
 
     = javascript_include_tag '//code.jquery.com/jquery-3.0.0.min.js'
 

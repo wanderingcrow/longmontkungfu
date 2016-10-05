@@ -1,15 +1,12 @@
 require 'slim'
 
-
-# the middleman-livereload extension isn't doing live style injection,
-# using http://livereload.com/ instead
-
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload do |live|
-#     live.livereload_css_target = "assets/stylesheets/all.css"
-#   end
-# end
+configure :development do
+  activate :livereload do |live|
+    # live.livereload_css_target = "assets/stylesheets/all.css"
+    live.livereload_css_pattern = Regexp.new('_.*\.scss')
+  end
+end
 
 # Directories
 set :css_dir, 'assets/stylesheets'
@@ -52,15 +49,13 @@ activate :contentful do |f|
   }
 end
 
-# build is borking on Netlify, bandaid
-ignore "about/post.html"
-ignore "stories/story.html"
-ignore "stories/snPost.html"
-ignore "country-pages/country-page.html"
-ignore "media/post.html"
-
 # using markdown for contentful stuff
 set :markdown_engine, :kramdown
 
 # seo goodness
 page "/sitemap.xml", :layout => false
+
+set :default_title, 'Great Way Chinese Martial Arts'
+set :default_meta_description, 'Great Way trains our students mentally, physically, and spiritaully — it is not just self-defense, but a way of life.'
+set :default_meta_image, 'http://greatwaychinesemartialarts.com/assets/images/default-og-image.jpg'
+set :default_meta_keywords, 'Martial Arts, Kung Fu, Tai Chi, Chinese Medicine, self defense, stop bullying, confidence, Longmont, Colorado, Boulder, Frederick, Firestone, Niwot'
