@@ -1,5 +1,7 @@
 body.index {
 
+  .page-hero { display: none; }
+
   section.hero {
     display: flex;
     align-items: center;
@@ -75,10 +77,10 @@ body.index {
     .paintbrush {
       background-image: image_url('home/paintbrush.png');
       background-repeat: repeat-x;
-      background-size: cover;
       width: 100%;
       height: 80px;
       position: absolute;
+      z-index: 10;
 
       @include media($medium-down) {
         display: none;
@@ -154,6 +156,6 @@ body.index {
 
 
   section.subscribe {
-    @include page-section;
+    @include page-section($section-bkgrnd-color: white);
   }
 }

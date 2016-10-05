@@ -49,6 +49,10 @@ html
 
 
     main
+      .page-hero
+        header: .container
+          h1= @title
+
       = yield
 
       .map
@@ -58,7 +62,7 @@ html
       footer.site-footer
         .container
           .branding
-            = image_tag('logo.svg', :class => 'logo', :alt => 'Great Way Chinese Martial Arts')
+            = link_to image_tag('logo.svg', :class => 'logo', :alt => 'Great Way Chinese Martial Arts'), '/'
 
           .nav
             = partial '/layouts/nav'

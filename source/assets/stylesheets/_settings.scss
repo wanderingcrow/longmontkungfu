@@ -28,12 +28,9 @@ $global-padding: 20px !default;
 $side-padding: 7% !default;
 $global-radius: 2px !default;
 
-@mixin page-section($section-bkgrnd-color: white) {
+@mixin page-section($section-bkgrnd-color: $bone) {
   @include padding($section-padding $side-padding);
-
-  &:nth-child(2n) {
-    background-color: $section-bkgrnd-color;
-  }
+  background-color: $section-bkgrnd-color;
 }
 
 

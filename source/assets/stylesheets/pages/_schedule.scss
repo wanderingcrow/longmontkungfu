@@ -1,0 +1,10 @@
+body.schedule {
+
+  section.overview {
+    @include page-section;
+  }
+
+  section.schedule {
+    @include page-section($section-bkgrnd-color: white);
+  }
+}
