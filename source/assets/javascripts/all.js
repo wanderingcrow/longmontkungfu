@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
     }
   })();
 
-	// navigation movement
+	// navigation movement (slides content over)
 	var isLateralNavAnimating = false;
 
 	// open/close lateral navigation
