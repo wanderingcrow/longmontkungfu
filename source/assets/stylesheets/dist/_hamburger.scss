@@ -85,29 +85,29 @@
 }
 
 /* active state, i.e. menu open */
-.c-hamburger--htla.is-active {
+.nav-trigger.is-active > .c-hamburger--htla {
   background-color: #18903c;
 }
 
-.c-hamburger--htla.is-active span {
+.nav-trigger.is-active > .c-hamburger--htla span {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.c-hamburger--htla.is-active span::before,
-.c-hamburger--htla.is-active span::after {
+.nav-trigger.is-active > .c-hamburger--htla span::before,
+.nav-trigger.is-active > .c-hamburger--htla span::after {
   width: 50%;
 }
 
-.c-hamburger--htla.is-active span::before {
+.nav-trigger.is-active > .c-hamburger--htla span::before {
   top: 0;
   -webkit-transform: translateX(38px) translateY(4px) rotate(45deg);
       -ms-transform: translateX(38px) translateY(4px) rotate(45deg);
           transform: translateX(38px) translateY(4px) rotate(45deg);
 }
 
-.c-hamburger--htla.is-active span::after {
+.nav-trigger.is-active > .c-hamburger--htla span::after {
   bottom: 0;
   -webkit-transform: translateX(38px) translateY(-4px) rotate(-45deg);
       -ms-transform: translateX(38px) translateY(-4px) rotate(-45deg);
@@ -130,7 +130,7 @@ $hamburger-bar-color: rgba(white, 0.75);
   background-color: transparent;
 }
 
-.c-hamburger--htla.is-active {
+.nav-trigger.is-active > .c-hamburger--htla {
   background-color: transparent;
 }
 
@@ -161,13 +161,13 @@ $hamburger-bar-color: rgba(white, 0.75);
   bottom: -5px;
 }
 
-.c-hamburger--htla.is-active span::before {
+.nav-trigger.is-active > .c-hamburger--htla span::before {
   -webkit-transform: translateX(9.5px) translateY(1px) rotate(45deg);
       -ms-transform: translateX(9.5px) translateY(1px) rotate(45deg);
           transform: translateX(9.5px) translateY(1px) rotate(45deg);
 }
 
-.c-hamburger--htla.is-active span::after {
+.nav-trigger.is-active > .c-hamburger--htla span::after {
   -webkit-transform: translateX(9.5px) translateY(-1px) rotate(-45deg);
       -ms-transform: translateX(9.5px) translateY(-1px) rotate(-45deg);
           transform: translateX(9.5px) translateY(-1px) rotate(-45deg);

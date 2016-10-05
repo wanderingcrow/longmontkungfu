@@ -1,28 +1,5 @@
 jQuery(document).ready(function($){
 
-	// navigation
-
-	var isLateralNavAnimating = false;
-
-	// open/close lateral navigation
-	$('.nav-trigger').on('click', function(event){
-		event.preventDefault();
-
-		//stop if nav animation is running
-		if( !isLateralNavAnimating ) {
-			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true;
-
-			$('body').toggleClass('navigation-is-open');
-			$('.main-nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				// animation is over
-				isLateralNavAnimating = false;
-			});
-		}
-
-	});
-
-
-
 	// slick sliders
   $('.slick-slider').slick({
     dots: true,
@@ -44,11 +21,8 @@ jQuery(document).ready(function($){
 
 	// hamburger icon (http://callmenick.com/_development/css-hamburger-menu-icons/)
 	(function() {
-
     "use strict";
-
-    var toggles = document.querySelectorAll(".c-hamburger");
-
+    var toggles = document.querySelectorAll(".nav-trigger");
     for (var i = toggles.length - 1; i >= 0; i--) {
       var toggle = toggles[i];
       toggleHandler(toggle);
@@ -60,7 +34,26 @@ jQuery(document).ready(function($){
         (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
       });
     }
-
   })();
+
+	// navigation movement
+	var isLateralNavAnimating = false;
+
+	// open/close lateral navigation
+	$('.nav-trigger').on('click', function(event){
+		event.preventDefault();
+
+		//stop if nav animation is running
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true;
+
+			$('body').toggleClass('navigation-is-open');
+			$('.main-nav').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				// animation is over
+				isLateralNavAnimating = false;
+			});
+		}
+
+	});
 
 });
