@@ -35,8 +35,9 @@ html
   body class='#{page_classes}'
 
     a.nav-trigger(href='#nav-drawer')
-      i.fa.fa-bars
-      | nav
+      button.c-hamburger.c-hamburger--htla: span nav
+      span.nav-hamburger-title nav
+
 
     nav.main-nav#nav-drawer
       .container

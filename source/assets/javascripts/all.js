@@ -7,6 +7,7 @@ jQuery(document).ready(function($){
 	// open/close lateral navigation
 	$('.nav-trigger').on('click', function(event){
 		event.preventDefault();
+
 		//stop if nav animation is running
 		if( !isLateralNavAnimating ) {
 			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true;
@@ -17,6 +18,7 @@ jQuery(document).ready(function($){
 				isLateralNavAnimating = false;
 			});
 		}
+
 	});
 
 
@@ -37,5 +39,28 @@ jQuery(document).ready(function($){
 	var random;
 	random = Math.floor(Math.random() * $('.hero-bkgrnd').length);
 	$('.hero-bkgrnd').hide().eq(random).show();
+
+
+
+	// hamburger icon (http://callmenick.com/_development/css-hamburger-menu-icons/)
+	(function() {
+
+    "use strict";
+
+    var toggles = document.querySelectorAll(".c-hamburger");
+
+    for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+    };
+
+    function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+        e.preventDefault();
+        (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+      });
+    }
+
+  })();
 
 });

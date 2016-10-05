@@ -84,12 +84,14 @@ nav.main-nav {
 // nav icon button
 // =========================================
 
+// see dist/hamburger for hamburger styling
+
 .nav-trigger {
   background-color: $charcoal;
   @include position(fixed, $global-padding $global-padding null null);
   z-index: 3;
   color: $marigold;
-  padding: 7px 16px 10px 16px;
+  padding: 6px 11px;
   border-radius: $global-radius;
   line-height: 1em;
   border: 1px solid rgba(white, 0.1);
@@ -103,7 +105,13 @@ nav.main-nav {
 
   &:hover {
     color: white;
-    background-color: $pumpkin;
+    background-color: lighten($charcoal, 10%);
+  }
+
+  .nav-hamburger-title {
+    position: relative;
+    margin-left: 5px;
+    top: -8px;
   }
 }
 
