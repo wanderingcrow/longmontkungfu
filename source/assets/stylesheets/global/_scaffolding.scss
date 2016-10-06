@@ -29,8 +29,9 @@ main {
 
 .page-hero {
   min-height: 400px;
-  background-color: pink;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   header {
     @include position(absolute, null 0 0 0);

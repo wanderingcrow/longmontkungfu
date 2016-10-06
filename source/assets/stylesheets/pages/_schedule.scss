@@ -1,5 +1,13 @@
 body.schedule {
 
+  .page-hero {
+    background-image: image_url('schedule/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('schedule/hero-lg.jpg');
+    }
+  }
+
   section.overview {
     @include page-section;
   }
