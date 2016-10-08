@@ -1,0 +1,11 @@
+body.chinese-medicine {
+
+  .page-hero {
+    background-image: image_url('chinese-medicine/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('chinese-medicine/hero-lg.jpg');
+    }
+  }
+
+}

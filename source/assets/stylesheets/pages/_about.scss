@@ -1,0 +1,11 @@
+body.about {
+
+  .page-hero {
+    background-image: image_url('about/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('about/hero-lg.jpg');
+    }
+  }
+
+}

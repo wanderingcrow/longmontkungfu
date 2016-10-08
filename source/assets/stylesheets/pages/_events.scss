@@ -1,0 +1,11 @@
+body.events {
+
+  .page-hero {
+    background-image: image_url('events/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('events/hero-lg.jpg');
+    }
+  }
+
+}

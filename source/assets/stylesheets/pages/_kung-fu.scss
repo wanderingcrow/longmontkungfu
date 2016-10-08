@@ -1,0 +1,11 @@
+body.kung-fu {
+
+  .page-hero {
+    background-image: image_url('kung-fu/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('kung-fu/hero-lg.jpg');
+    }
+  }
+
+}

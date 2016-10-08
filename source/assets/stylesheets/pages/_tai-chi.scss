@@ -1,0 +1,11 @@
+body.tai-chi {
+
+  .page-hero {
+    background-image: image_url('tai-chi/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('tai-chi/hero-lg.jpg');
+    }
+  }
+
+}
