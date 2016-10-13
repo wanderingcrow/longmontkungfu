@@ -1,1 +1,14 @@
+img {
+  max-width: 100%;
+  display: block;
+}
 
+figure {
+  position: relative;
+
+  figcaption {
+    font-size: 0.9rem;
+
+    p { font-size: 0.9rem; }
+  }
+}

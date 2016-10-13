@@ -46,6 +46,7 @@ activate :contentful do |f|
     snippets: '2vxx6oWPpuiEyoQyYQKYUg',
     snippetsLong: '43iBGgebSgYgKWEaW44KYG',
     events: '6qhjP37bZCKImkYqKmYkYu',
+    staff: 'staff',
   }
 end
 

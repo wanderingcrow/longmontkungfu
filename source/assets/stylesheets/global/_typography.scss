@@ -37,9 +37,17 @@ h2 {
 
 h3 {
   color: $pumpkin;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 0.4em;
 }
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2em;
+  color: $azure;
+}
+
+
 
 
 
@@ -80,7 +88,7 @@ em {
 p {
   font-size: 16px;
   @include margin(0 0 0.7em 0);
-  line-height: 1.3em;
+  line-height: 1.4em;
 
   &:last-child {
     margin-bottom: 0;
@@ -119,4 +127,18 @@ ul {
       font-size: 0.9em;
     }
   }
+}
+
+
+
+// =========================================
+// hr
+// =========================================
+
+hr {
+  border: none;
+  height: 1px;
+  background: $neutral;
+  margin: $global-padding 0;
+  width: 100%;
 }

@@ -1,1 +1,68 @@
 - @title = "About Us"
+
+section.logo-overview
+  .container
+    aside= image_tag('about/logo.png', :alt => 'Great Way Logo')
+    article
+      h2 Our Logo
+      p The images we chose to use for our logo and to represent the philosophical aspects of Great Way are inspired by centuries-old symbols from Taoism.
+      p In ancient times, people developed a symbolic relationship between the four animals, the cardinal directions, weather patterns, colors etc. Being that martial arts are steeped in the influences of both Taoism and Buddhism, there is an understandable association to these symbols with the growth of an earnest practitioner of martial arts.
+
+
+section.logo-details
+  .container
+    figure
+      = image_tag('about/turtle.png', :alt => 'Black Turtle')
+      figcaption
+        h3 Black Turtle
+        p The Black Turtle, or Zhi Ming (執明), is also known as the Black Warrior. In the past, Zhi Ming was thought to have carried the Earth on its back; it served as the foundation of life. For Great Way students, it is useful to consider that Zhi Ming represents the beginning and the need to form a strong foundation.
+        p Without that understanding, how can we take responsibility for our own growth and acknowledge the need to strengthen the body, focus the mind and have a balanced spirit?
+
+  .container
+    figure
+      = image_tag('about/tiger.png', :alt => 'White Tiger')
+      figcaption
+        h3 White Tiger
+        p The White Tiger, or Jian Bing (監兵), is the next step for our students. Once a solid foundation is formed, a practitioner is able to view their training in a multifaceted way. We begin to stress the very yin process of meditation as another form of workout. No longer are we just trying to simply sweat or work off stress or to get ready to pass a test.
+        p Learning to calm the mind and body as we are faced with stressful situations helps us take our training into everyday life. For example, when we are repeatedly attacked in controlled situations we can reflect through meditation and prepare for the next time.
+
+  .container
+    figure
+      = image_tag('about/phoenix.png', :alt => 'Vermillion Bird')
+      figcaption
+        h3 Vermillion Bird
+        p The Vermilion Bird is called Ling Guang (陵光). This stage represents not only an advancement in physical ability, but in conscious awareness as well. We strive to overcome and hold to mindfulness while pushing the body to its limits in various ways. This holding of the mind is important because it allows the practitioner to become more aware of the dynamics of life around him or herself.
+        p Over time, they can face obstacles with calm peacefulness rather than just reacting to negative stimulus.
+
+  .container
+    figure
+      = image_tag('about/dragon.png', :alt => 'Azure Dragon')
+      figcaption
+        h3 Azure Dragon
+        p The Azure Dragon has the name Meng Zhang (孟章). For the practitioner, this part of their training is very important. It draws on the previous levels and enables our students the opportunity to move differently in the ocean of life. The ability to exist in water, on land, and soar in the heavens is one of the amazing qualities of the Dragon.
+        p Philosophically, this shows that someone at this level can use their skills to help others of varying abilities in life while striving to transcend the chaos around them.
+
+
+
+section.staff
+  .container
+    h2 Staff
+    p Our staff has decades of experience practicing and teaching kung fu.
+    blockquote Martial arts training should be a multifaceted journey, appealing to body, mind, and spirit. Challenging us to grow and stretch in unique ways that we might live a more conscious and vibrant life.
+
+  .container
+    - if Dir.exist?(config.data_dir)
+      - data.greatway.staff.sort_by{|id, staff| staff.lastName }.each do |id, staff|
+        figure
+          img(src='#{ staff.image.url }?w=300' alt='#{ staff.firstName } #{ staff.lastName }')
+          figcaption
+            = staff.title
+            | &nbsp;
+            = staff.lastName
+
+
+
+section.faq
+  .container
+    h2 FAQ
+    p There's a lot to know. We want you to be as informed as possible. If you don't see your question here, feel free to <a href='mailto:info@greatwaychinesemartialarts.com'>email us.</a>

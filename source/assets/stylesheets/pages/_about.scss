@@ -8,4 +8,96 @@ body.about {
     }
   }
 
+
+
+  section.logo-overview {
+    @include page-section($section-bkgrnd-color: $charcoal);
+    @include dark-background;
+    padding-bottom: 0;
+
+    .container { @include align-vertically; }
+
+    aside {
+      @include media($medium-up) {
+        @include span-columns(6);
+      }
+    }
+
+    article {
+      @include media($medium-up) {
+        @include span-columns(6);
+      }
+    }
+  }
+
+
+
+  section.logo-details {
+    @include page-section($section-bkgrnd-color: $charcoal);
+    @include dark-background;
+
+    figure {
+      padding: $global-padding;
+      @include margin($global-padding null);
+      @include align-vertically;
+      border: 1px solid rgba(white, 0.2);
+      border-radius: $global-radius;
+      background: rgba(white, 0.05);
+
+      img {
+        border-radius: $global-radius;
+        margin-bottom: $global-padding/2;
+        background: rgba(white, 0.05);
+
+        @include media($medium-up) {
+          @include span-columns(4);
+          margin-bottom: 0;
+        }
+      }
+
+      figcaption {
+        @include media($medium-up) {
+          @include span-columns(8);
+        }
+      }
+    }
+  }
+
+
+
+  section.staff {
+    @include page-section;
+
+    figure {
+      margin-bottom: 30px;
+
+      @include media($medium-up) {
+        @include span-columns(3);
+        @include omega(4n);
+      }
+
+      @include media($medium-down) {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+
+      img {
+        border-radius: $global-radius;
+      }
+
+      figcaption {
+        @include position(absolute, null 0 0 0);
+        background-color: rgba(black, 0.75);
+        color: $bone;
+        padding: 5px;
+      }
+    }
+  }
+
+
+
+  section.faq {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
 }

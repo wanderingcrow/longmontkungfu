@@ -59,6 +59,7 @@ body.index {
 
   section.quote {
     @include page-section($section-bkgrnd-color: $charcoal);
+    @include dark-background;
 
     @include media($medium-up) {
       @include padding($section-padding 0);
@@ -66,7 +67,6 @@ body.index {
     }
 
     blockquote {
-      color: rgba(white, 0.5);
       border-left: 0;
       padding-left: 0;
 

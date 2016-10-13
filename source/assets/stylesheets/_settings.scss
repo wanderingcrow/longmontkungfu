@@ -22,11 +22,23 @@ $coffee: #868477;
 // spacing and sizes
 // =========================================
 
-$max-width: 830px;
 $section-padding: 65px !default;
 $global-padding: 20px !default;
 $side-padding: 7% !default;
-$global-radius: 2px !default;
+$global-radius: 3px !default;
+
+@mixin align-vertically {
+  @include media($medium-up) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+// =========================================
+// sections
+// =========================================
 
 @mixin page-section($section-bkgrnd-color: $bone) {
   @include padding($section-padding $side-padding);
@@ -43,7 +55,7 @@ $primary-font: Lato, 'sans-serif' !default;
 $primary-font-weight: 300 !default;
 
 @mixin dark-background {
-  color: rgba(white, 0.9);
+  color: rgba(white, 0.75);
 
   h2 {
     color: white;
