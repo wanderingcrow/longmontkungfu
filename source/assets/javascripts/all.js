@@ -1,14 +1,16 @@
 jQuery(document).ready(function($){
 
 	// slick sliders
-  $('.slick-slider').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-		arrows: false
-	});
+  if ($('.slick-slider').length) {
+    $('.slick-slider').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+  		arrows: false
+  	});
+  }
 
 
 
