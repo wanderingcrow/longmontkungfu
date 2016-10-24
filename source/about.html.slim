@@ -54,11 +54,25 @@ section.staff
     - if Dir.exist?(config.data_dir)
       - data.greatway.staff.sort_by{|id, staff| staff.lastName }.each do |id, staff|
         figure
-          img(src='#{ staff.image.url }?w=300' alt='#{ staff.firstName } #{ staff.lastName }')
-          figcaption
+          a(href='##{ staff.firstName }#{ staff.lastName }')
+            img(src='#{ staff.image.url }?w=300' alt='#{ staff.firstName } #{ staff.lastName }')
+            figcaption
+              = staff.title
+              | &nbsp;
+              = staff.lastName
+
+
+        // modals
+        .remodal(data-remodal-id='#{ staff.firstName }#{ staff.lastName }')
+          button.remodal-close(data-remodal-action='close')
+          h3
             = staff.title
             | &nbsp;
+            = staff.firstName
+            | &nbsp;
             = staff.lastName
+          = Kramdown::Document.new(staff.bio).to_html
+
 
 
 

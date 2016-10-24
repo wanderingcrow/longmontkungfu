@@ -14,3 +14,10 @@ Assumes you have bundler installed.
 2. `bundle install`
 3. Create a `.env` file at the root of the project and supply the API token for Contentful.
 4. `middleman contentful` will popluate or update your data folder. All data is ignored in git.
+
+----
+
+## Usage
+
+### Modals
+Modals use [Remodal](https://github.com/VodkaBears/Remodal). To use, give the modal a class of `remodal` and `data-remodal-id='modal'`. `button.remodal-close(data-remodal-action='close')` is your close button. The modal itself is simply called with a hashtag.
