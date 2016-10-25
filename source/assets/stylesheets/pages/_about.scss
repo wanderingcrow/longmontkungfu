@@ -68,21 +68,32 @@ body.about {
   section.staff {
     @include page-section;
 
+    article {
+      @include media($medium-up) {
+        @include span-columns(4);
+      }
+    }
+
+    aside {
+      @include media($medium-up) {
+        @include span-columns(8);
+        padding-left: $global-padding;
+      }
+    }
+
     figure {
       margin-bottom: 30px;
+      border-radius: $global-radius;
+      overflow: hidden;
 
       @include media($medium-up) {
-        @include span-columns(3);
-        @include omega(4n);
+        @include span-columns(4);
+        @include omega(3n);
       }
 
       @include media($medium-down) {
         @include span-columns(6);
         @include omega(2n);
-      }
-
-      img {
-        border-radius: $global-radius;
       }
 
       figcaption {
@@ -98,6 +109,21 @@ body.about {
 
   section.faq {
     @include page-section($section-bkgrnd-color: white);
+
+    .faq-grid {
+      margin-top: $global-padding;
+
+      li {
+        @include margin(2% 2% 0 0);
+        width: 48%;
+        border-radius: $global-radius;
+        overflow: hidden;
+
+        @include media($medium-up) {
+          width: 23%;
+        }
+      }
+    }
   }
 
 }

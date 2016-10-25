@@ -222,7 +222,8 @@
 
 @media only screen and (min-width: 641px) {
   .remodal {
-    max-width: $max-width;
+    max-width: 600px;
+    border-radius: $global-radius;
   }
 }
 

@@ -1,5 +1,7 @@
 - @title = "About Us"
 
+= javascript_include_tag 'masonry.min'
+
 section.logo-overview
   .container
     aside= image_tag('about/logo.png', :alt => 'Great Way Logo')
@@ -46,32 +48,33 @@ section.logo-details
 
 section.staff
   .container
-    h2 Staff
-    p Our staff has decades of experience practicing and teaching kung fu.
-    blockquote Martial arts training should be a multifaceted journey, appealing to body, mind, and spirit. Challenging us to grow and stretch in unique ways that we might live a more conscious and vibrant life.
+    article
+      h2 Staff
+      p Our staff has decades of experience practicing and teaching kung fu.
+      blockquote Martial arts training should be a multifaceted journey, appealing to body, mind, and spirit. Challenging us to grow and stretch in unique ways that we might live a more conscious and vibrant life.
 
-  .container
-    - if Dir.exist?(config.data_dir)
-      - data.greatway.staff.sort_by{|id, staff| staff.lastName }.each do |id, staff|
-        figure
-          a(href='##{ staff.firstName }#{ staff.lastName }')
-            img(src='#{ staff.image.url }?w=300' alt='#{ staff.firstName } #{ staff.lastName }')
-            figcaption
+    aside
+      - if Dir.exist?(config.data_dir)
+        - data.greatway.staff.sort_by{|id, staff| staff.lastName }.each do |id, staff|
+          figure
+            a(href='##{ staff.firstName }#{ staff.lastName }')
+              img(src='#{ staff.image.url }?w=300' alt='#{ staff.firstName } #{ staff.lastName }')
+              figcaption
+                = staff.title
+                | &nbsp;
+                = staff.lastName
+
+
+          // staff modals
+          .remodal(data-remodal-id='#{ staff.firstName }#{ staff.lastName }')
+            button.remodal-close(data-remodal-action='close')
+            h3
               = staff.title
               | &nbsp;
+              = staff.firstName
+              | &nbsp;
               = staff.lastName
-
-
-        // modals
-        .remodal(data-remodal-id='#{ staff.firstName }#{ staff.lastName }')
-          button.remodal-close(data-remodal-action='close')
-          h3
-            = staff.title
-            | &nbsp;
-            = staff.firstName
-            | &nbsp;
-            = staff.lastName
-          = Kramdown::Document.new(staff.bio).to_html
+            = Kramdown::Document.new(staff.bio).to_html
 
 
 
@@ -80,3 +83,143 @@ section.faq
   .container
     h2 FAQ
     p There's a lot to know. We want you to be as informed as possible. If you don't see your question here, feel free to <a href='mailto:info@greatwaychinesemartialarts.com'>email us.</a>
+
+  .container
+    ul#masonry-container.faq-grid
+      li: a(href='#faq-2')
+        =image_tag('about/phil.jpg', :alt => 't-shirt colors')
+        .tile What do the different t-shirt colors mean?
+
+      li: a(href='#faq-1')
+        .tile.alt-1 What should I wear to class?
+
+      li: a(href='#faq-0')
+        .tile.alt-4 How do I count to ten in Chinese?
+
+      li: a(href='#faq-3')
+        =image_tag('about/tshirt.jpg', :alt => 't-shirt')
+        .tile Am I required to buy a uniform?
+
+      li: a(href='#faq-8')
+        =image_tag('about/dragon.jpg', :alt => 'dragon')
+        .tile How does the belt/sash system work?
+
+      li: a(href='#faq-4')
+        =image_tag('about/break.jpg')
+        .tile What is La She She Kan?
+
+      li: a(href='#faq-5')
+        .tile.alt-3 Do I have to sign a contract?
+
+      li: a(href='#faq-6')
+        =image_tag('about/eagle-claw.jpg', :alt => 'eagle claw')
+        .tile What is the difference between kung fu and other major martial arts?
+
+      li: a(href='#faq-7')
+        .tile.alt-2 Something else on your mind?
+
+      li: a(href='#faq-9')
+        =image_tag('about/ages.jpg', :alt => 'all ages')
+        .tile What's a good age for martial arts?
+
+      li: a(href='#faq-10')
+        .tile.alt-1 Is tai chi just for old people in the park?
+
+
+
+/ faq modals
+.remodal(data-remodal-id='faq-0')
+  button.remodal-close(data-remodal-action='close')
+  h3 How do I count to ten in Chinese?
+  p We count in Chinese during class to honor tradition. This may help you learn faster:
+  ol
+    li yee (ee)
+    li uhr (er)
+    li sahn (san)
+    li suh (su)
+    li woo (wu)
+    li lyo (lee-oh)
+    li chee (chi)
+    li bah (ba)
+    li jyo (jee-oh)
+    li shi (sure)
+
+
+.remodal(data-remodal-id='faq-1')
+  button.remodal-close(data-remodal-action='close')
+  h3 What should I wear to class?
+  p When you start classes it is important to wear comfortable clothing. Sweats, a t-shirt, and tennis shoes work well; being able to move around is the most important part.
+
+
+.remodal(data-remodal-id='faq-2')
+  button.remodal-close(data-remodal-action='close')
+  h3 What do the different t-shirt colors mean?
+  p We use different colored t-shirts to give an association to the different animals that we use in our logo. Different ranks not only have different sashes, but different colored t-shirts. Most students wear black, higher level students wear white, student teachers, or todais, wear the red shirt, and Sifu wears blue on his uniform. These four colors are best explained in the description of our logo (Black Turtle, White Tiger, Vermillion Bird, and Azure Dragon).
+
+.remodal(data-remodal-id='faq-3')
+  button.remodal-close(data-remodal-action='close')
+  h3 Am I required to buy a uniform?
+  p No, it's not required, but it might make your life a little easier. It's nice to have dedicated workout clothes and to match the other members of Great Way, but it's not required.
+
+.remodal(data-remodal-id='faq-4')
+  button.remodal-close(data-remodal-action='close')
+  .flex-video
+    iframe(src='//www.youtube.com/embed/1XbgwQU_wso')
+  h3 What is La She She Kan?
+  p Our ceremonial bow has martial application and should be performed as if you are fighting someone.
+  ol
+    li Break stance.
+    li Pull the left fist to the hip (imagine elbowing someone behind you), the right hand comes to the center of the chest (knife edge forward) like prayer position. Bow slightly.
+    li Step the right foot forward, pivot the foot to a 90 degree angle as the right hand becomes a fist the left hand covers as you support an elbow strike to the rear.
+    li Step the left foot forward to a cat stance (just the ball of the foot is on the ground), the hands come in as you perform a strike to the center of the chest (hands are in Break stance position).
+    li Step the left foot back to lunge stance, both hands block down groin level (as if your opponent is kneeing or kicking at your groin).
+    li Step the right foot back so the feet are side-by-side as you do this, the hands roll inward come up and out to perform a double back fist (head level), then the fists pull back to armpit height (elbowing to the rear again).
+    li The hands will open slowly and push with tension to full extension at the sides (the use of tension and dragon hiss is the beginning of breath control).
+    li The hands rise as they open, coming forward and outward slightly. They strike in a double ridge hand (right hits the temple, left hits the jaw), cross the middle line, then pull back and elbow strike to the rear, fists end up under the armpits.
+    li Break stance again; this ends the bow.
+
+
+.remodal(data-remodal-id='faq-5')
+  button.remodal-close(data-remodal-action='close')
+  h3 Do I have to sign a contract?
+  p We do not require a contract. If you are on a monthly EFT (Electronic Funds Transfer) plan, we'll just need 30 days notice to cancel your account.
+
+
+.remodal(data-remodal-id='faq-6')
+  button.remodal-close(data-remodal-action='close')
+  h3 What is the difference between kung fu and other major martial arts?
+  p Kung fu is a broad term for the many types of Chinese martial arts. There are hard styles, soft styles, family styles, and temple styles. Kung fu is typically known for its use of a wide variety of fighting techniques and stances. There is also the practice of <em>forms</em> which allows the student the opportunity to develop greater coordination, balance, control, stamina, etc. Kung fu students also practice with traditional Chinese weapons.
+  p Karate and Tae Kwon Do are typically known to be hard styles and have more linear movement. They also utilize katas (forms) to help students develop better control and skill.
+  p Judo and Aikido work more specifically on throws and joint locks.
+  p Jujitsu is known more for ground work or grappling and joint locks.
+  p This is a very broad discussion and to be fair to other arts it would be beneficial to research them more deeply because this description is very generalized.
+
+
+.remodal(data-remodal-id='faq-7')
+  button.remodal-close(data-remodal-action='close')
+  h3 Something else on your mind?
+  p In our digital, multi-tasking world, martial arts offers a welcome escape. Come in, chat with us. We're here to help. Personal relationships and community are a serious part of Great Way.
+  a.button(href='/book-appointment') Book Appointment
+
+
+.remodal(data-remodal-id='faq-8')
+  button.remodal-close(data-remodal-action='close')
+  h3 How does the belt/sash system work?
+  p Using a belt or sash to gauge rank is not a part of traditional martial arts. We use a sash system within our style to help our students understand and associate with what they are learning.
+  p At each level there is a certain amount of information that must be learned before you test. It is not about passing the test, it is about understanding and applying what you learn.
+  p We start with a plain black sash to indicate our Beginner level. With each test we add fringe of different colors to show the new level that they have attained. The piece of art shown above shows the colors used for our sash fringes.
+
+
+.remodal(data-remodal-id='faq-9')
+  button.remodal-close(data-remodal-action='close')
+  h3 What's a good age for martial arts?
+  p All ages. We're aware that's a cliché answer, but in this case, it's true.
+  p There is something to be learned at every age: focus, fitness, grace... something. Sifu and the Todais (student teachers) will meet you where you're at regardless of your ability. We have beginning students of all ages.
+
+
+.remodal(data-remodal-id='faq-10')
+  button.remodal-close(data-remodal-action='close')
+  h3 Is tai chi just for old people in the park?
+  p Tai chi <em>is</em> a martial art. It isn't usually learned at speed, but there are reasons for that. Among those reasons: it's harder to do it slowly. You'll learn how to use micro-muscles. This will give you greater strength and balance (which translates beautifully into more dynamic arts such as kung fu).
+  p It may look mellow, but tai chi can absolutely be hard work and quite rewarding. Don't confuse slow, peaceful movements with weakness.
+  p We encourage our kung fu students (of all ages) to expand their learning into different arenas. Our tai chi classes have a wide range of ages &mdash; including kids. Sifu and every Todai (student teacher) practice tai chi, and not many people who've met them would accuse them of being that old person in the park.

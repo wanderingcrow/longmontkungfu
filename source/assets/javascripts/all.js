@@ -58,4 +58,15 @@ jQuery(document).ready(function($){
 
 	});
 
+
+
+  // masonry
+  if ($('#masonry-container').length) {
+    $(window).load(function() {
+      $('#masonry-container').masonry({
+        itemSelector: '#masonry-container li'
+      });
+    });
+  }
+
 });
