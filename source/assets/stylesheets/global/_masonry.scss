@@ -1,51 +1,51 @@
 #masonry-container > li {
+  background: $charcoal;
+  @include transition(all, 0.2s);
+
+  &:hover {
+    background: lighten($charcoal, 20%);
+    @include transition(all, 0.2s);
+  }
 
   .tile {
-    padding: .75rem;
-    font-size: 1.2rem;
-    background: $charcoal;
-  }
+    padding: $global-padding/2;
+    @include transition(all, 0.2s);
 
     &:hover {
-      background: lighten($charcoal, 20%);
+      @include transition(all, 0.2s);
     }
-
-  a {
-    color: $neutral;
   }
 
-  .alt-1, .alt-2, .alt-3, .alt-4 {
-    font-size: 1.5rem;
-    line-height: 1.2em;
-    padding: 1rem;
+  a {
+    color: $bone;
   }
 
   .alt-1 {
     @extend .tile;
     background: $twilight;
-  }
 
     &:hover {
       background: lighten($twilight, 10%);
     }
+  }
 
   .alt-2 {
     @extend .tile;
     background: $azure;
-  }
 
     &:hover {
       background: lighten($azure, 10%);
     }
+  }
 
   .alt-3 {
     @extend .tile;
     background: $pumpkin;
-  }
 
     &:hover {
       background: lighten($pumpkin, 10%);
     }
+  }
 
   .alt-4 {
     @extend .tile;

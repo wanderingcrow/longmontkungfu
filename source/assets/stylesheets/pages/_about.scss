@@ -102,6 +102,10 @@ body.about {
         color: $bone;
         padding: 5px;
       }
+
+      &:hover {
+        box-shadow: 3px 3px 12px 1px rgba(black, 0.35);
+      }
     }
   }
 
