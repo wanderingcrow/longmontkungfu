@@ -27,6 +27,11 @@ main {
 // sections
 // =========================================
 
+section {
+  position: relative;
+  background-repeat: no-repeat;
+}
+
 .page-hero {
   min-height: 400px;
   position: relative;
@@ -37,10 +42,15 @@ main {
     @include position(absolute, null 0 0 0);
     @include padding($global-padding 0);
   }
-}
 
-section {
-  position: relative;
+  .logo {
+    height: 80px;
+    @include position(absolute, null 0 -10px null);
+  }
+
+  .container {
+    position: relative;
+  }
 }
 
 
