@@ -2,6 +2,7 @@
 // colors
 // =========================================
 
+$cloud: #f7f7f7;
 $bone: #efefef;
 $charcoal: #2b2829;
 $neutral: #ccc;
@@ -58,7 +59,7 @@ $primary-font-weight: 300 !default;
   color: rgba(white, 0.75);
 
   h2 {
-    color: white;
+    color: lighten($verdant, 20%);
   }
 
   a {

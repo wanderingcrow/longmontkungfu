@@ -33,12 +33,20 @@ h2 {
   color: $verdant;
   font-size: 1.8rem;
   margin-bottom: 0.3em;
+
+  small {
+    font-size: 0.5em;
+  }
 }
 
 h3 {
   color: $pumpkin;
   font-size: 1.4rem;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+p + h3 {
+  margin-top: 1em;
 }
 
 h4 {
@@ -80,6 +88,13 @@ strong {
 em {
   font-style: italic;
 }
+
+small {
+  font-size: 0.7em;
+}
+
+
+
 
 // =========================================
 // block level

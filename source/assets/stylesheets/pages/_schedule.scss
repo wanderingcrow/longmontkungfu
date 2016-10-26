@@ -8,11 +8,55 @@ body.schedule {
     }
   }
 
-  section.overview {
-    @include page-section;
-  }
+
 
   section.schedule {
+    @include page-section($section-bkgrnd-color: white);
+
+    h2 { margin: 0; }
+
+    .day {
+      border: 1px solid $neutral;
+      border-radius: $global-radius;
+      padding: $global-padding;
+      background-color: $cloud;
+      margin-top: $global-padding;
+      min-height: 260px;
+
+      @include media($medium-up) {
+        @include span-columns(4);
+        @include omega(3n);
+      }
+    }
+
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: $global-padding/2;
+    }
+
+    dt {
+      width: 40%;
+      @include margin($global-padding/2 null);
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      width: 60%;
+      @include margin($global-padding/2 null);
+    }
+  }
+
+
+
+  section.flexible-options {
+    @include page-section($section-bkgrnd-color: $twilight);
+    @include dark-background;
+  }
+
+
+  section.subscribe {
     @include page-section($section-bkgrnd-color: white);
   }
 }

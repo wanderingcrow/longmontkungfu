@@ -1,14 +1,92 @@
 - @title = "Class Schedule"
 
-section.overview
+section.schedule
+  .container
+    h2 Schedule <small>(last updated October 2016)</small>
+    p We don't rely heavily on <em>advanced</em> and <em>beginner</em> as there are so many other factors that might play in — age, fitness level, ability to learn new material, or even the ability of a student to attend one day and not another. If you don't know which class is a good fit, we recommend you talk to Sifu about it.
+
+    h3 Notes on Class Cancellation
+    p There are times when due to circumstances beyond our control, class is cancelled with somewhat short notice. When this happens, we'll send out emails to everyone on our list. If you're not getting our emails already, feel free to sign up below.
+
+  .container
+    .day
+      h3 Monday
+      dl
+        dt Kids 1
+        dd 4:30&ndash;5:30pm
+
+        dt Kids 2
+        dd 5:30&ndash;6:30pm
+
+        dt Adult
+        dd 7&ndash;8:30pm
+
+    .day
+      h3 Tuesday
+      dl
+        dt Kids 2
+        dd 4:30&ndash;5:30pm
+
+        dt Kids <small>(Adv)</small>
+        dd 5:30&ndash;6:30pm
+
+        dt Tai Chi
+        dd 6:30&ndash;7:30
+
+        dt Adult
+        dd 7:30&ndash;9pm
+
+    .day
+      h3 Wednesday
+      dl
+        dt Kids 1
+        dd 4:30&ndash;5:30pm
+
+        dt Kids 2
+        dd 5:30&ndash;6:30pm
+
+        dt Adult
+        dd 7&ndash;8:30pm
+
+    .day
+      h3 Thursday
+      dl
+        dt Kids 2
+        dd 4:30&ndash;5:30pm
+
+        dt Kids <small>(Adv)</small>
+        dd 5:30&ndash;6:30pm
+
+        dt Adult <small>(Adv)</small>
+        dd 6:30&ndash;8:30pm
+
+    .day
+      h3 Friday
+      dl
+        dt Tai Chi
+        dd 5:30&ndash;6:30pm
+
+    .day
+      h3 Saturday
+      dl
+        dt Tai Chi
+        dd 9:30&ndash;10:30am
+
+        dt Adult
+        dd 10:30am&ndash;12pm
+
+
+
+section.flexible-options
   .container
     h2 Flexible Options
-    p Our class schedule is designed to accommodate as many people as we can. We realize that most of the students and families at Great Way have busy lives, so we're always willing to chat with you to try and find some options that work for you. If the current schedule does not fit your needs, you'd like to focus on something else not covered, or you're just not sure where you fit best, please feel free to make an appointment to talk to Sifu Keller.
+    p Our class schedule is designed to accommodate as many people as we can. We realize that most of the students and families at Great Way have busy lives and other activities — we're always willing to chat with you to try and find the best option.
+    p If the current schedule does not fit your needs, you'd like to focus on something else, or you're just not sure where you fit best, please feel free to make an appointment to talk to Sifu Keller.
 
     = link_to 'Schedule Appointment', 'https://greatwaymartialarts.wufoo.com/forms/book-appointment/', :target => '_blank', :class => 'btn'
 
 
 
-section.schedule
+section.subscribe
   .container
-    h2 Schedule (last updated)
+    = partial '/layouts/emailSignup'
