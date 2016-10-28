@@ -8,4 +8,28 @@ body.events {
     }
   }
 
+
+
+  section.overview {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
+
+
+  section.events {
+    @include page-section;
+  }
+
+
+
+  section.photos {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
+
+
+  section.subscribe {
+    @include page-section;
+  }
+
 }

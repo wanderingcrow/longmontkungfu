@@ -144,6 +144,25 @@ ul {
   }
 }
 
+ol.default {
+  counter-reset: numbers;
+
+  li {
+    padding-left: 25px;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+
+    &:before {
+      content: counter(numbers, decimal-leading-zero);
+      counter-increment: numbers;
+      margin-left: -25px;
+      width: 25px;
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+}
+
 
 
 // =========================================

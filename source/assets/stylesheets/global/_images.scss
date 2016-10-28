@@ -12,3 +12,19 @@ figure {
     p { font-size: 0.9rem; }
   }
 }
+
+figure.overlay {
+  border-radius: $global-radius;
+  overflow: hidden;
+  margin-bottom: $global-padding;
+
+  figcaption {
+    background-color: rgba(black, 0.75);
+    padding: $global-padding/2;
+    @include position(absolute, null 0 0 0);
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
