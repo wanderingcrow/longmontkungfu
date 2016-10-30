@@ -10,7 +10,16 @@ section.overview
 section.events
   .container
     h2 Upcoming Events
-    p Nothing in the works for the near future. Keep checking back.
+    - if Dir.exist?(config.data_dir)
+      - data.greatway.events.each do |id, event|
+        .event
+          - if event.heroImage
+            figure
+              img src="#{ event.heroImage.url }?w=900"
+          h3= event.title
+          - if event.date
+            time= event.date.strftime('%A %d %b %Y')
+          = Kramdown::Document.new(event.content).to_html
 
 
 section.photos

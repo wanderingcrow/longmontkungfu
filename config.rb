@@ -42,11 +42,9 @@ activate :contentful do |f|
   f.cda_query = { limit: 10000 }
   f.content_types = {
     testimonial: '4zvUlYLQSAyMqSi4Ugka2q',
-    schedule: '7M3YEMOiDSYMoQWqMYAmEc',
-    snippets: '2vxx6oWPpuiEyoQyYQKYUg',
-    snippetsLong: '43iBGgebSgYgKWEaW44KYG',
     events: '6qhjP37bZCKImkYqKmYkYu',
     staff: 'staff',
+    classSchedule: 'classSchedule',
   }
 end
 

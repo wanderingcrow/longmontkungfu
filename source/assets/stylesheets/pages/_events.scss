@@ -18,6 +18,28 @@ body.events {
 
   section.events {
     @include page-section;
+
+    .event {
+      margin-top: $global-padding;
+      border: 1px solid $neutral;
+      border-radius: $global-radius;
+      padding: $global-padding;
+      background-color: white;
+
+      img {
+        margin-bottom: $global-padding;
+        border-radius: $global-radius;
+      }
+
+      time {
+        margin: $global-padding/2 0;
+        display: block;
+        border-left: 4px solid $water;
+        padding-left: 10px;
+        color: $coffee;
+      }
+
+    }
   }
 
 
