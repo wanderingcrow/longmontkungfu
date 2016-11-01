@@ -123,7 +123,7 @@ body.index {
 
 
   section.testimonials {
-    @include page-section;
+    @include page-section($section-bkgrnd-color: white);
 
     footer {
       font-size: 0.8em;
@@ -156,6 +156,6 @@ body.index {
 
 
   section.subscribe {
-    @include page-section($section-bkgrnd-color: white);
+    @include page-section;
   }
 }

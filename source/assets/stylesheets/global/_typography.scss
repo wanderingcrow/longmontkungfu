@@ -114,7 +114,7 @@ small {
 p {
   font-size: 16px;
   @include margin(0 0 0.7em 0);
-  line-height: 1.4em;
+  line-height: 1.6em;
 
   &:last-child {
     margin-bottom: 0;
@@ -196,7 +196,7 @@ ul.inline-list {
 hr {
   border: none;
   height: 1px;
-  background: $neutral;
+  background: lighten($neutral, 10%);
   margin: $global-padding 0;
   width: 100%;
 }

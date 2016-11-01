@@ -35,6 +35,26 @@ body.chinese-medicine {
 
   section.treatments {
     @include page-section($section-bkgrnd-color: white);
+
+    .treatment-options {
+      border-top: 1px solid $neutral;
+      border-bottom: 1px solid $neutral;
+      margin: $global-padding 0;
+      padding: $global-padding*2 0;
+
+      @include media($medium-up) {
+        column-count: 2;
+        column-gap: 80px;
+        column-rule: 1px dotted #efefef;
+      }
+
+      p { font-size: 0.9rem; }
+
+      article {
+        break-inside: avoid;
+        margin: 0 0 $global-padding 0;
+      }
+    }
   }
 
 }
