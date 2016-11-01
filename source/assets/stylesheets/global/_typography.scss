@@ -176,6 +176,17 @@ ol.default {
   }
 }
 
+ul.inline-list {
+  li {
+    display: inline-block;
+    margin-right: $global-padding/2;
+
+    &:nth-child(even) {
+      color: $coffee;
+    }
+  }
+}
+
 
 
 // =========================================

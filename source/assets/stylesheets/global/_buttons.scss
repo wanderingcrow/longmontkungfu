@@ -18,6 +18,10 @@
     font-size: 0.8em;
     margin-right: 7px;
   }
+
+  hr + & {
+    margin-top: 0;
+  }
 }
 
 .btn-white {

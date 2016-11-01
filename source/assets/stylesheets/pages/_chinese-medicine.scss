@@ -16,6 +16,20 @@ body.chinese-medicine {
 
   section.history {
     @include page-section($section-bkgrnd-color: $bone);
+    padding-top: 350px + $section-padding/2;
+
+    .hero {
+      height: 350px;
+      background-size: cover;
+      background-repeat: none;
+      background-position: center;
+      background-image: image_url('chinese-medicine/moxa.jpg');
+      @include position(absolute, 0 0 null 0);
+
+      @include media($medium-up) {
+        background-image: image_url('chinese-medicine/moxa-lg.jpg');
+      }
+    }
   }
 
 
