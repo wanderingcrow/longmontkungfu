@@ -8,4 +8,75 @@ body.kung-fu {
     }
   }
 
+
+  section.kids {
+    @include page-section($section-bkgrnd-color: $bone);
+
+    article {
+      @include media($medium-up) {
+        @include span-columns(6);
+        @include shift(6);
+        padding-left: $global-padding;
+      }
+    }
+
+    aside {
+      @include media($medium-up) {
+        background-image: image_url('kung-fu/kids-kung-fu.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include position(absolute, 0 50% 0 0);
+      }
+    }
+  }
+
+
+  section.adult {
+    @include page-section($section-bkgrnd-color: white);
+    padding-top: 500px + $section-padding/2;
+
+    .hero {
+      background-image: image_url('kung-fu/adult.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      @include position(absolute, 0 0 null 0);
+
+      @include media($medium-up) {
+        background-image: image_url('kung-fu/adult-lg.jpg');
+      }
+    }
+
+    .detail {
+      margin: $global-padding 0;
+      border-left-width: 4px;
+      border-left-style: solid;
+      padding-left: $global-padding;
+
+      @include media($medium-up) {
+        @include span-columns(6);
+        @include omega(2n);
+
+        &:last-child {
+          @include span-columns(12);
+        }
+      }
+
+      // color me borders
+      &:nth-child(1n) { border-left-color: $pumpkin; }
+      &:nth-child(2n) { border-left-color: $charcoal; }
+      &:nth-child(3n) { border-left-color: $marigold; }
+      &:nth-child(4n) { border-left-color: $verdant; }
+      &:nth-child(5n) { border-left-color: $twilight; }
+    }
+  }
+
+
+
+  section.advantages {
+    @include page-section($section-bkgrnd-color: $bone);
+  }
+
 }

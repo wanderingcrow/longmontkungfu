@@ -16,35 +16,40 @@ body.schedule {
     h2 { margin: 0; }
 
     .day {
-      border: 1px solid $neutral;
       border-radius: $global-radius;
-      padding: $global-padding;
       background-color: $cloud;
       margin-top: $global-padding;
-      min-height: 260px;
+      min-height: 190px;
 
       @include media($medium-up) {
         @include span-columns(4);
         @include omega(3n);
       }
-    }
 
-    dl {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: $global-padding/2;
-    }
+      h3 {
+        color: white;
+        background: $twilight;
+        padding: $global-padding/2;
+      }
 
-    dt {
-      width: 40%;
-      @include margin($global-padding/2 null);
-      font-size: 0.75em;
-      text-transform: uppercase;
-    }
+      dl {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: $global-padding/2;
+        padding: 0 $global-padding/2;
+      }
 
-    dd {
-      width: 60%;
-      @include margin($global-padding/2 null);
+      dt {
+        width: 40%;
+        @include margin($global-padding/2 null);
+        font-size: 0.75em;
+        text-transform: uppercase;
+      }
+
+      dd {
+        width: 60%;
+        @include margin($global-padding/2 null);
+      }
     }
   }
 

@@ -53,6 +53,16 @@ section {
   }
 }
 
+section.big-quote {
+  @include page-section($section-bkgrnd-color: $marigold);
+  @include dark-background;
+
+  blockquote {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+}
+
 
 
 // =========================================
@@ -71,5 +81,40 @@ ul.contact {
       padding-top: $global-padding/2;
       border-top: 1px dashed rgba(white, 0.1);
     }
+  }
+}
+
+// boxed grid (like advantages of kung fu)
+.grid-boxed {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: $global-padding;
+
+  @include media($medium-up) {
+    &:after {
+      content: '';
+      border-left: 1px solid $neutral;
+      @include position(absolute, 0 50% 0 null);
+    }
+
+    &:before {
+      content: '';
+      border-top: 1px solid $bone;
+      @include position(absolute, 0 0 null 0);
+    }
+  }
+}
+
+.item {
+  @include padding($global-padding);
+
+  @include media($medium-up) {
+    width: 50%;
+    border-top: 1px solid $neutral;
+  }
+
+  p {
+    font-size: 0.9em;
   }
 }

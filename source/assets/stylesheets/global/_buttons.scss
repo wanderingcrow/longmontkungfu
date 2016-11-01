@@ -11,6 +11,12 @@
 
   &:hover {
     color: white;
+    background-color: darken($water, 10%);
+  }
+
+  i {
+    font-size: 0.8em;
+    margin-right: 7px;
   }
 }
 

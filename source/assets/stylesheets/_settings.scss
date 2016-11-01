@@ -58,6 +58,11 @@ $primary-font-weight: 300 !default;
 @mixin dark-background {
   color: rgba(white, 0.75);
 
+  blockquote {
+    color: rgba(white, 0.8);
+    border-left: 1px solid rgba(white, 0.4);
+  }
+
   h2 {
     color: lighten($verdant, 20%);
   }
