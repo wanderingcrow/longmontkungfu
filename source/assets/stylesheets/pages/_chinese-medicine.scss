@@ -8,4 +8,19 @@ body.chinese-medicine {
     }
   }
 
+
+  section.overview {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
+
+  section.history {
+    @include page-section($section-bkgrnd-color: $bone);
+  }
+
+
+  section.treatments {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
 }

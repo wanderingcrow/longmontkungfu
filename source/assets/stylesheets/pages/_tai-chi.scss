@@ -8,4 +8,19 @@ body.tai-chi {
     }
   }
 
+
+  section.overview {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
+
+  section.tai-chi {
+    @include page-section($section-bkgrnd-color: $bone);
+  }
+
+
+  section.qi-gong {
+    @include page-section($section-bkgrnd-color: $bone);
+  }
+
 }
