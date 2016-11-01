@@ -16,11 +16,42 @@ body.tai-chi {
 
   section.tai-chi {
     @include page-section($section-bkgrnd-color: $bone);
+
+    aside {
+      background-image: image_url('tai-chi/tai-chi.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @include position(absolute, 0 50% 0 0);
+    }
+
+    article {
+      @include media($medium-up) {
+        @include span-columns(6);
+        @include shift(6);
+        padding-left: $global-padding;
+      }
+    }
   }
 
 
   section.qi-gong {
     @include page-section($section-bkgrnd-color: $bone);
+
+    aside {
+      background-image: image_url('tai-chi/bamboo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @include position(absolute, 0 0 0 50%);
+    }
+
+    article {
+      @include media($medium-up) {
+        @include span-columns(6);
+        padding-right: $global-padding;
+      }
+    }
   }
 
 }
