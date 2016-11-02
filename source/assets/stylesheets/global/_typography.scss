@@ -25,24 +25,36 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   color: white;
-  font-size: 2.75em;
+  font-size: 2.2rem;
   margin: 0;
+
+  @include media($medium-up) {
+    font-size: 2.75rem;
+  }
 }
 
 h2 {
   color: $verdant;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 0.3em;
 
   small {
     font-size: 0.5em;
   }
+
+  @include media($medium-up) {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   color: $pumpkin;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.2em;
+
+  @include media($medium-up) {
+    font-size: 1.3rem;
+  }
 }
 
 p + h3 {

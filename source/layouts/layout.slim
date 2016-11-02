@@ -33,12 +33,12 @@ html
   body class='#{page_classes}'
 
     a.nav-trigger(href='#nav-drawer')
-      button.c-hamburger.c-hamburger--htla: span nav
+      button.c-hamburger.c-hamburger--htla: span
       span.nav-hamburger-title nav
 
 
     nav.main-nav#nav-drawer
-      .containerr
+      .container
         .primary-column
           = link_to image_tag('logo.svg', :class => 'logo', :alt => 'Great Way Chinese Martial Arts'), '/'
           = partial '/layouts/contact'

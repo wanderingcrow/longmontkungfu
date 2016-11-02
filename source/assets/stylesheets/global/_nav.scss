@@ -4,7 +4,7 @@
 // =========================================
 
 nav.main-nav {
-  @include padding(50px 0);
+  @include padding(5%);
   @include position(fixed, 0 null null 0);
   z-index: 1;
   background-color: $charcoal;
@@ -15,6 +15,8 @@ nav.main-nav {
   visibility: hidden;
   @include size(100%);
   @include transition(visibility 0s 0.7s);
+  @include transition-timing-function(cubic-bezier(.91,.01,.6,.99));
+  overflow-y: auto;
 
   @include media($medium-up) {
     @include padding(200px 5%);
@@ -23,19 +25,22 @@ nav.main-nav {
   .navigation-is-open & {
     visibility: visible;
     @include transition(visibility 0s 0s);
-    @include transition-timing-function(cubic-bezier(.91,.01,.6,.99));
   }
 
   // the nav screen
 
   .container {
     max-width: 600px;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   img.logo {
     margin-bottom: $global-padding;
-    max-width: 270px;
+    max-width: 230px;
+
+    @include media($medium-up) {
+      max-width: 270px;
+    }
   }
 
   ul.contact {
@@ -45,6 +50,14 @@ nav.main-nav {
 
     @include media($medium-down) {
       margin-bottom: $global-padding*2;
+
+      .email-link {
+        margin-bottom: $global-padding;
+        padding: 5px 10px;
+        border: 1px solid rgba(white, 0.2);
+        border-radius: $global-radius;
+        display: inline-block;
+      }
     }
   }
 
@@ -52,20 +65,12 @@ nav.main-nav {
     @include media($medium-up) {
       @include span-columns(5);
     }
-
-    @include media($medium-down) {
-      @include padding(null 5%);
-    }
   }
 
   .secondary-column {
     @include media($medium-up) {
       @include shift(1);
       @include span-columns(6);
-    }
-
-    @include media($medium-down) {
-      @include padding(null 5%);
     }
   }
 
@@ -113,6 +118,7 @@ nav.main-nav {
   line-height: 1em;
   border: 1px solid rgba(white, 0.1);
   font-weight: 400;
+  display: flex;
 
   i {
     margin-right: 0.5rem;
@@ -126,9 +132,7 @@ nav.main-nav {
   }
 
   .nav-hamburger-title {
-    position: relative;
-    margin-left: 5px;
-    top: -8px;
+    @include margin(1px 5px);
   }
 }
 

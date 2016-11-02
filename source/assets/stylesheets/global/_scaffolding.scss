@@ -1,15 +1,17 @@
-body {
-  background: white
+body, html {
+  background: white;
+  overflow-x: hidden;
 }
 
 main {
   background: $bone;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   position: relative;
   z-index: 2;
   @include transition(transform 0.7s);
+  backface-visibility: hidden;
 
   .navigation-is-open & {
     @include transform(translateX(100%));
@@ -40,16 +42,28 @@ section {
 
   header {
     @include position(absolute, null 0 0 0);
-    @include padding($global-padding 0);
+    @include padding($global-padding $side-padding);
+
   }
 
   .logo {
     height: 80px;
     @include position(absolute, null 0 -10px null);
+
+    @include media($medium-down) {
+      height: 60px;
+    }
   }
 
   .container {
     position: relative;
+  }
+
+  h1 {
+    @include media($medium-down) {
+      max-width: 50%;
+      line-height: 1;
+    }
   }
 }
 
@@ -107,9 +121,10 @@ ul.contact {
 }
 
 .item {
-  @include padding($global-padding);
+  @include padding($global-padding 0);
 
   @include media($medium-up) {
+    @include padding($global-padding);
     width: 50%;
     border-top: 1px solid $neutral;
   }
