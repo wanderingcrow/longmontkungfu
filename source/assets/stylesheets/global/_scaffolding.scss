@@ -5,9 +5,9 @@ body, html {
 
 main {
   background: $bone;
-  height: 100vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  // height: 100vh;
+  // overflow-y: auto;
+  // -webkit-overflow-scrolling: touch;
   position: relative;
   z-index: 2;
   @include transition(transform 0.7s);
@@ -37,8 +37,14 @@ section {
 .page-hero {
   min-height: 400px;
   position: relative;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center top;
+
+  @include media(min-width 1441px) {
+    background-size: cover;
+    background-attachment: scroll;
+  }
 
   header {
     @include position(absolute, null 0 0 0);
