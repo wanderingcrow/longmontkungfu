@@ -4,7 +4,7 @@
 // =========================================
 
 nav.main-nav {
-  @include padding(200px 5%);
+  @include padding(50px 0);
   @include position(fixed, 0 null null 0);
   z-index: 1;
   background-color: $charcoal;
@@ -16,6 +16,10 @@ nav.main-nav {
   @include size(100%);
   @include transition(visibility 0s 0.7s);
 
+  @include media($medium-up) {
+    @include padding(200px 5%);
+  }
+
   .navigation-is-open & {
     visibility: visible;
     @include transition(visibility 0s 0s);
@@ -26,6 +30,7 @@ nav.main-nav {
 
   .container {
     max-width: 600px;
+    overflow: hidden;
   }
 
   img.logo {
@@ -37,11 +42,19 @@ nav.main-nav {
     font-size: 0.8em;
     line-height: 1.5em;
     color: rgba(white, 0.5);
+
+    @include media($medium-down) {
+      margin-bottom: $global-padding*2;
+    }
   }
 
   .primary-column {
     @include media($medium-up) {
       @include span-columns(5);
+    }
+
+    @include media($medium-down) {
+      @include padding(null 5%);
     }
   }
 
@@ -49,6 +62,10 @@ nav.main-nav {
     @include media($medium-up) {
       @include shift(1);
       @include span-columns(6);
+    }
+
+    @include media($medium-down) {
+      @include padding(null 5%);
     }
   }
 
@@ -65,7 +82,7 @@ nav.main-nav {
 
       a {
         display: block;
-        @include padding(2% 3%);
+        @include padding(1.5% 3%);
 
         &:hover { background-color: rgba(white, 0.1); }
       }

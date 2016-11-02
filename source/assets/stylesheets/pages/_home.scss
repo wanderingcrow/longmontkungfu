@@ -139,6 +139,10 @@ body.index {
         position: absolute;
         top: 70%;
         color: lighten($neutral, 5%);
+
+        @include media($medium-down) {
+          display: none;
+        }
       }
 
       &:before {
