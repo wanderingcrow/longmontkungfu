@@ -85,5 +85,5 @@ $primary-font-weight: 300 !default;
 $baby-bear: 414px;
 $mama-bear: 768px;
 
-$medium-up: new-breakpoint(min-width $mama-bear);
-$medium-down: new-breakpoint(max-width $mama-bear);
+$medium-up: new-breakpoint(min-width $max-width);
+$medium-down: new-breakpoint(max-width $max-width);
