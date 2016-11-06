@@ -8,6 +8,10 @@ body.kung-fu {
     }
   }
 
+  section.overview {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
 
   section.kids {
     @include page-section($section-bkgrnd-color: $bone);
