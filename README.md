@@ -8,7 +8,7 @@ This project uses the fantastic [Middleman](https://middlemanapp.com) for the la
 
 ## Installation
 
-Assumes you have bundler installed.
+Assumes you have a rails dev environment and bundler installed.
 
 1. Clone and cd into folder
 2. `bundle install`
