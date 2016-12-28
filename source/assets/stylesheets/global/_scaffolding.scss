@@ -1,14 +1,14 @@
 body, html {
-  background: white;
+  background-image: image_url('body-background.jpg');
+  background-repeat: repeat;
   overflow-x: hidden;
 }
 
 main {
   background: $bone;
-  // height: 100vh;
-  // overflow-y: auto;
-  // -webkit-overflow-scrolling: touch;
   position: relative;
+  max-width: $page-width;
+  margin: 0 auto;
   z-index: 2;
   @include transition(transform 0.7s);
   backface-visibility: hidden;

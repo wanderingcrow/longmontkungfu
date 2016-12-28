@@ -28,6 +28,8 @@ $global-padding: 20px !default;
 $side-padding: 7% !default;
 $global-radius: 3px !default;
 
+$page-width: 1440px;
+
 @mixin align-vertically {
   @include media($medium-up) {
     display: flex;

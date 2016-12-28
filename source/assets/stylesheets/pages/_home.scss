@@ -8,6 +8,7 @@ body.index {
     @include padding(null $side-padding);
     position: relative;
     height: 700px;
+    max-height: 80vh;
 
     header {
       color: rgba(white, 0.5);

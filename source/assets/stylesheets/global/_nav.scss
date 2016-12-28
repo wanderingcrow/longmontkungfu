@@ -108,10 +108,17 @@ nav.main-nav {
 
 // see dist/hamburger for hamburger styling
 
-.nav-trigger {
-  background-color: $charcoal;
-  @include position(fixed, $global-padding $global-padding null null);
+.nav-trigger-holder {
+  @include position(fixed, 0 null null 50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: $page-width;
   z-index: 3;
+}
+
+.nav-trigger {
+  @include margin($global-padding $global-padding 0 0);
+  background-color: $charcoal;
   color: $marigold;
   padding: 6px 11px 2px 11px;
   border-radius: $global-radius;
@@ -119,6 +126,8 @@ nav.main-nav {
   border: 1px solid rgba(white, 0.1);
   font-weight: 400;
   display: flex;
+  float: right;
+  max-width: 83px;
 
   i {
     margin-right: 0.5rem;
