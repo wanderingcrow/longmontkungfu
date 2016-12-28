@@ -200,6 +200,40 @@ ul.inline-list {
   }
 }
 
+dl.card {
+  border: 1px solid $neutral;
+  border-radius: $global-radius;
+  overflow: hidden;
+  background: white;
+
+  dd, dt { padding: 15px; }
+
+  dt {
+    background-color: $azure;
+    color: $bone;
+    font-size: 1.2rem;
+
+    small {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.3em;
+      margin-top: 5px;
+    }
+  }
+
+  dd {
+    font-size: 1.5em;
+  }
+
+  @include media($medium-down) {
+    @include span-columns(6);
+  }
+
+  @include media($medium-up) {
+    @include span-columns(3);
+  }
+}
+
 
 
 // =========================================

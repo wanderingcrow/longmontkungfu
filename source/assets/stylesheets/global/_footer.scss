@@ -12,6 +12,10 @@ footer.site-footer {
     &:hover { color: $water; }
   }
 
+  .subgroup-break {
+    break-after: column;
+  }
+
   .branding,
   .social {
 

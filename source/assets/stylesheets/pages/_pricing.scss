@@ -1,0 +1,25 @@
+body.pricing {
+
+  .page-hero {
+    background-image: image_url('pricing/hero.jpg');
+
+    @include media($medium-up) {
+      background-image: image_url('pricing/hero-lg.jpg');
+    }
+  }
+
+
+
+  section.overview {
+    @include page-section($section-bkgrnd-color: white);
+  }
+
+
+
+
+  section.prices {
+    @include page-section;
+  }
+
+
+}
