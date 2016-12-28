@@ -127,6 +127,7 @@ GEM
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
+    rake (11.3.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -162,6 +163,7 @@ DEPENDENCIES
   middleman-dotenv
   middleman-livereload
   neat
+  rake
   sassc
   slim
 
