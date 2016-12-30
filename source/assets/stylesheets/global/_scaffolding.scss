@@ -54,7 +54,7 @@ section {
 
   header {
     @include position(absolute, null 0 0 0);
-    @include padding($global-padding $side-padding);
+    @include padding($global-padding*2 $side-padding);
 
   }
 
@@ -98,6 +98,25 @@ section.big-quote {
 .map {
   border-top: 1px solid $neutral;
 }
+
+.paintbrush {
+  background-image: image_url('paintbrush.svg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  width: 100%;
+  height: 80px;
+  @include position(absolute, null 0 0 0);
+  z-index: 10;
+  fill: red;
+}
+
+.paintbrush-light {
+  @extend .paintbrush;
+  background-image: image_url('paintbrush-light.svg');
+}
+
+.paintbrush.top { top: -30px; }
+.paintbrush.bottom { bottom: -30px; }
 
 // contact block in footer and nav (and etc)
 ul.contact {

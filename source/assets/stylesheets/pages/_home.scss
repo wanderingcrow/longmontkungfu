@@ -73,23 +73,6 @@ body.index {
 
       footer { color: $marigold; }
     }
-
-
-    .paintbrush {
-      background-image: image_url('home/paintbrush.png');
-      background-repeat: repeat-x;
-      width: 100%;
-      height: 80px;
-      position: absolute;
-      z-index: 10;
-
-      @include media($medium-down) {
-        display: none;
-      }
-    }
-
-    .paintbrush.top { top: -30px; }
-    .paintbrush.bottom { bottom: -30px; }
   }
 
 
