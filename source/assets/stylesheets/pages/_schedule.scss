@@ -15,15 +15,20 @@ body.schedule {
 
     h2 { margin: 0; }
 
+    .days {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     .day {
       border-radius: $global-radius;
       background-color: $cloud;
       margin-top: $global-padding;
-      min-height: 190px;
+      width: 100%;
 
       @include media($medium-up) {
-        @include span-columns(4);
-        @include omega(3n);
+        width: 32%;
       }
 
       h3 {
@@ -33,10 +38,10 @@ body.schedule {
       }
 
       dl {
+        margin: 0;
+        padding: $global-padding/2;
         display: flex;
         flex-wrap: wrap;
-        margin-top: $global-padding/2;
-        padding: 0 $global-padding/2;
       }
 
       dt {

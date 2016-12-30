@@ -11,73 +11,74 @@ section.schedule
     p There are times when due to circumstances beyond our control, class is cancelled with somewhat short notice. When this happens, we'll send out emails to everyone on our list. If you're not getting our emails already, feel free to sign up using the form at the bottom of this page.
 
   .container
-    / there is probably a cleaner way to do this
-    - if Dir.exist?(config.data_dir)
-      .day
-        h3 Monday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Monday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+    .days
+      / there is probably a cleaner way to do this
+      - if Dir.exist?(config.data_dir)
+        .day
+          h3 Monday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Monday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
-      .day
-        h3 Tuesday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Tuesday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+        .day
+          h3 Tuesday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Tuesday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
-      .day
-        h3 Wednesday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Wednesday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+        .day
+          h3 Wednesday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Wednesday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
-      .day
-        h3 Thursday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Thursday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+        .day
+          h3 Thursday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Thursday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
-      .day
-        h3 Friday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Friday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+        .day
+          h3 Friday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Friday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
-      .day
-        h3 Saturday
-        dl
-          - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
-            - if s.day == 'Saturday'
-              dt= s.classTitle
-              dd
-                = s.beginTime.strftime('%l:%M%P')
-                | &ndash;
-                = s.endTime.strftime('%l:%M%P')
+        .day
+          h3 Saturday
+          dl
+            - data.greatway.classSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Saturday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
 
 
 
