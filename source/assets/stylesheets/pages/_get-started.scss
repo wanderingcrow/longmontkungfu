@@ -19,15 +19,35 @@ body.get-started {
 
     aside {
       @include media($medium-up) {
-        @include span-columns(3);
+        @include span-columns(2);
       }
     }
 
     article {
       @include media($medium-up) {
-        @include span-columns(9);
+        @include span-columns(10);
       }
     }
+
+    .container {
+      display: flex;
+      align-items: center;
+      @include padding($global-padding*2 null);
+      border-bottom: 1px dashed $neutral;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+
+  section.sign-up {
+    @include page-section($section-bkgrnd-color: white);
   }
 
 
