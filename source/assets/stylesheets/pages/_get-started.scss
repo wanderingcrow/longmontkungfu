@@ -18,8 +18,20 @@ body.get-started {
     @include page-section;
 
     aside {
+      font-size: 4rem;
+      color: $wine;
+
       @include media($medium-up) {
         @include span-columns(2);
+      }
+
+      @include media($medium-down) {
+        margin-bottom: $global-padding/2;
+      }
+
+      span {
+        font-size: 0.75rem;
+        text-transform: uppercase;
       }
     }
 
@@ -30,8 +42,6 @@ body.get-started {
     }
 
     .container {
-      display: flex;
-      align-items: center;
       @include padding($global-padding*2 null);
       border-bottom: 1px dashed $neutral;
 
@@ -41,6 +51,11 @@ body.get-started {
 
       &:first-child {
         display: block;
+      }
+
+      @include media($medium-up) {
+        display: flex;
+        align-items: center;
       }
     }
   }
