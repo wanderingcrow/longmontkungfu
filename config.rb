@@ -39,7 +39,7 @@ activate :automatic_alt_tags
 activate :contentful do |f|
   f.space = { greatway: 'bdllfbg9npjz' }
   f.access_token = ENV['CONTENTFUL_TOKEN']
-  f.cda_query = { limit: 10000 }
+  f.cda_query = { limit: 1000 }
   f.content_types = {
     testimonial: '4zvUlYLQSAyMqSi4Ugka2q',
     events: '6qhjP37bZCKImkYqKmYkYu',
