@@ -120,7 +120,6 @@ nav.main-nav {
   @include margin($global-padding $global-padding 0 0);
   background-color: $charcoal;
   color: $marigold;
-  padding: 6px 11px 2px 11px;
   border-radius: $global-radius;
   line-height: 1em;
   border: 1px solid rgba(white, 0.1);
@@ -140,8 +139,8 @@ nav.main-nav {
     background-color: lighten($charcoal, 10%);
   }
 
-  .nav-hamburger-title {
-    @include margin(1px 5px);
+  .hamburger:focus {
+    outline: 0;
   }
 }
 

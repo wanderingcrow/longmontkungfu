@@ -21,10 +21,10 @@ jQuery(document).ready(function($){
 
 
 
-	// hamburger icon (http://callmenick.com/_development/css-hamburger-menu-icons/)
+	// change hamburger icon on click
 	(function() {
     "use strict";
-    var toggles = document.querySelectorAll(".nav-trigger");
+    var toggles = document.querySelectorAll(".hamburger");
     for (var i = toggles.length - 1; i >= 0; i--) {
       var toggle = toggles[i];
       toggleHandler(toggle);

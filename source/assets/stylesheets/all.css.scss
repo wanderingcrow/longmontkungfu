@@ -23,6 +23,9 @@
 @import 'pages/schedule';
 @import 'pages/tai-chi';
 
-@import 'dist/hamburger';
+// https://github.com/jonsuh/hamburgers
+@import 'dist/hamburgers/hamburgers';
+
+// http://vodkabears.github.io/remodal/
 @import 'dist/remodal-theme';
 @import 'dist/remodal';

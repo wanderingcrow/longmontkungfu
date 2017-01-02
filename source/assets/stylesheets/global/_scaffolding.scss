@@ -103,11 +103,11 @@ section.big-quote {
   background-image: image_url('paintbrush.svg');
   background-repeat: repeat-x;
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 80px;
   @include position(absolute, null 0 0 0);
   z-index: 10;
-  fill: red;
 }
 
 .paintbrush-light {
