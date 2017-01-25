@@ -35,16 +35,11 @@ section {
 }
 
 .page-hero {
-  min-height: 400px;
+  min-height: 600px;
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center top;
-
-  @include media(min-width 1441px) {
-    background-size: cover;
-    background-attachment: scroll;
-  }
 
   @include media($medium-down) {
     background-size: cover;
