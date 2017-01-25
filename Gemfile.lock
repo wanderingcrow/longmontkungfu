@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/contentful/contentful_middleman.git
-  revision: 91e12afe297aacbc98a537ca42998d8a0a9db554
-  ref: 91e12afe297aacbc98a537ca42998d8a0a9db554
+  revision: f18090455ff40965e59fe6106b6520f1105681ff
+  branch: dl/upgrade-to-v4
   specs:
-    contentful_middleman (1.3.1)
-      contentful (~> 0.8)
+    contentful_middleman (1.5.0)
+      contentful (~> 1.0)
       contentful-webhook-listener (~> 0.1)
       middleman-cli (~> 4.0)
       middleman-core (~> 4.0)
@@ -31,9 +31,8 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.4)
-    contentful (0.12.0)
-      http (~> 1.0)
-      json (~> 1.8)
+    contentful (1.2.2)
+      http (> 0.8, < 3.0)
       multi_json (~> 1)
     contentful-webhook-listener (0.3.0)
     contracts (0.13.0)
@@ -55,7 +54,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.4.6)
-    http (1.0.4)
+    http (2.1.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 1.0.1)
@@ -65,7 +64,6 @@ GEM
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    json (1.8.6)
     kramdown (1.13.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
