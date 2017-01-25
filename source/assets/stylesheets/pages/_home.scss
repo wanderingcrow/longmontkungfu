@@ -29,8 +29,8 @@ body.index {
     .hero-bkgrnd {
       @include position(absolute, 0 0 0 0);
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center top;
+      background-attachment: fixed;
       z-index: -1;
       display: none;
     }
