@@ -4,7 +4,7 @@ require 'slim'
 configure :development do
   activate :livereload do |live|
     # live.livereload_css_target = "assets/stylesheets/all.css"
-    live.livereload_css_pattern = Regexp.new('_.*\.scss')
+    live.livereload_css_pattern = Regexp.new('_.*\.sass')
   end
 end
 
@@ -29,16 +29,13 @@ end
 # pretty URLs
 activate :directory_indexes
 
-# hide private keys
-activate :dotenv
-
 # automagically add alt tags to images
 activate :automatic_alt_tags
 
 # contentful info
 activate :contentful do |f|
   f.space = { greatway: 'bdllfbg9npjz' }
-  f.access_token = ENV['CONTENTFUL_TOKEN']
+  f.access_token = 'f0ddf42524660964b82f706c430867b7f72ce8ba46525da61892ab53537e2f55'
   f.cda_query = { limit: 1000 }
   f.content_types = {
     testimonial: '4zvUlYLQSAyMqSi4Ugka2q',
