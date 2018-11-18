@@ -8,54 +8,31 @@ body.schedule {
     }
   }
 
+  ul.contact {
+    font-size: 14px;
+  }
 
 
-  section.schedule {
+
+  section.schedule-overview {
     @include page-section($section-bkgrnd-color: white);
+  }
 
-    h2 { margin: 0; }
 
-    .days {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+  section.longmont, section.thornton {
+    h2 {
+      margin-bottom: 0;
     }
+  }
 
-    .day {
-      border-radius: $global-radius;
-      background-color: $cloud;
-      margin-top: $global-padding;
-      width: 100%;
+  section.longmont {
+    @include page-section($section-bkgrnd-color: $bone);
+  }
 
-      @include media($medium-up) {
-        width: 32%;
-      }
 
-      h3 {
-        color: white;
-        background: $twilight;
-        padding: $global-padding/2;
-      }
 
-      dl {
-        margin: 0;
-        padding: $global-padding/2;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      dt {
-        width: 40%;
-        @include margin($global-padding/2 null);
-        font-size: 0.75em;
-        text-transform: uppercase;
-      }
-
-      dd {
-        width: 60%;
-        @include margin($global-padding/2 null);
-      }
-    }
+  section.thornton {
+    @include page-section($section-bkgrnd-color: white);
   }
 
 

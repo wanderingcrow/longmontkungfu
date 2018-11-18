@@ -1,6 +1,6 @@
 - @title = "Class Schedule"
 
-section.schedule
+section.schedule-overview
   .paintbrush-light.top
   .container
     h2 Schedule
@@ -10,7 +10,20 @@ section.schedule
     h3 Notes on Class Cancellation
     p There are times when due to circumstances beyond our control, class is cancelled with somewhat short notice. When this happens, we'll send out emails to everyone on our list. If you're not getting our emails already, feel free to sign up using the form at the bottom of this page.
 
+
+section.longmont
   .container
+    h2 Longmont Schedule
+    ul.contact
+      li 512 11th Ave, Longmont, CO 80501
+      li
+        | 303-651-2526 |&nbsp;
+        = link_to 'email', 'mailto:info@greatwaychinesemartialarts.com'
+
+
+    ul.misc-links.inline-list
+      li= link_to '<i class="fa fa-external-link"></i> Schedule Appointment', 'https://greatwaymartialarts.wufoo.com/forms/book-appointment/', :target => '_blank', :class => 'btn'
+      li= link_to '<i class="fa fa-external-link"></i> Register for Classes', 'https://greatwaymartialarts.wufoo.com/forms/sign-up/', :target => '_blank', :class => 'btn'
     .days
       / there is probably a cleaner way to do this
       - if Dir.exist?(config.data_dir)
@@ -80,18 +93,93 @@ section.schedule
                   | &ndash;
                   = s.endTime.strftime('%l:%M%P')
 
-
-
   .container
     p: small &#42;Friday's kids' class is free and open to all, but please bring a non-perishable item for the food pantry.
+
+
+section.thornton
+  .container
+    h2 Thornton Schedule
+    ul.contact
+      li 803 W. 88th Ave, Thornton, CO 80260
+      li
+        | 720.306.1704 |&nbsp;
+        = link_to 'email', 'mailto:greatwaycmasouth@gmail.com'
+    .days
+      / there is probably a cleaner way to do this
+      - if Dir.exist?(config.data_dir)
+        .day
+          h3 Monday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Monday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
+        .day
+          h3 Tuesday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Tuesday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
+        .day
+          h3 Wednesday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Wednesday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
+        .day
+          h3 Thursday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Thursday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
+        .day
+          h3 Friday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Friday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
+        .day
+          h3 Saturday
+          dl
+            - data.greatway.thorntonClassSchedule.sort_by{ |id, s| s.beginTime }.each do |id, s|
+              - if s.day == 'Saturday'
+                dt= s.classTitle
+                dd
+                  = s.beginTime.strftime('%l:%M%P')
+                  | &ndash;
+                  = s.endTime.strftime('%l:%M%P')
+
 
 section.flexible-options
   .container
     h2 Flexible Options
     p Our class schedule is designed to accommodate as many people as we can. We realize that most of the students and families at Great Way have busy lives and other activities — we're always willing to chat with you to try and find the best option.
-    p If the current schedule does not fit your needs, you'd like to focus on something else, or you're just not sure where you fit best, please feel free to make an appointment to talk to Sifu Keller.
-
-    = link_to 'Schedule Appointment', 'https://greatwaymartialarts.wufoo.com/forms/book-appointment/', :target => '_blank', :class => 'btn'
+    p If the current schedule does not fit your needs, you'd like to focus on something else, or you're just not sure where you fit best, please feel free to email your Sifu or Todai to set up a time to chat.
 
 
 

@@ -1,0 +1,41 @@
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .day {
+    border-radius: $global-radius;
+    background-color: $cloud;
+    margin-top: $global-padding;
+    width: 100%;
+
+    @include media($medium-up) {
+      width: 32%;
+    }
+
+    h3 {
+      color: white;
+      background: $twilight;
+      padding: $global-padding/2;
+    }
+
+    dl {
+      margin: 0;
+      padding: $global-padding/2;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    dt {
+      width: 40%;
+      @include margin($global-padding/2 null);
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      width: 60%;
+      @include margin($global-padding/2 null);
+    }
+  }
+}

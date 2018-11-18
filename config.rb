@@ -42,6 +42,7 @@ activate :contentful do |f|
     events: '6qhjP37bZCKImkYqKmYkYu',
     staff: 'staff',
     classSchedule: 'classSchedule',
+    thorntonClassSchedule: 'thorntonClassSchedule',
   }
 end
 
