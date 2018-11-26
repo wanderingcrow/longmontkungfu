@@ -42,7 +42,9 @@ html
       .container
         .primary-column
           = link_to image_tag('logo.svg', :class => 'logo', :alt => 'Great Way Chinese Martial Arts'), '/'
-          = partial '/layouts/contact'
+          ul.contact
+            = partial '/layouts/contact-longmont'
+            = partial '/layouts/contact-thornton'
         .secondary-column
           = partial '/layouts/nav'
 
@@ -68,6 +70,8 @@ html
 
           .social
             = partial '/layouts/social'
-            = partial '/layouts/contact'
+            ul.contact
+              = partial '/layouts/contact-longmont'
+              = partial '/layouts/contact-thornton'
 
     = javascript_include_tag 'all'

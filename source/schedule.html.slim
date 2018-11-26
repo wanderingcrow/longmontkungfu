@@ -1,4 +1,4 @@
-- @title = "Class Schedule"
+- @title = "Schedule & Locations"
 
 section.schedule-overview
   .paintbrush-light.top
@@ -24,6 +24,7 @@ section.longmont
     ul.misc-links.inline-list
       li= link_to '<i class="fa fa-external-link"></i> Schedule Appointment', 'https://greatwaymartialarts.wufoo.com/forms/book-appointment/', :target => '_blank', :class => 'btn'
       li= link_to '<i class="fa fa-external-link"></i> Register for Classes', 'https://greatwaymartialarts.wufoo.com/forms/sign-up/', :target => '_blank', :class => 'btn'
+      li= link_to '<i class="fa fa-pencil"></i> Sign Waiver', 'https://greatwaymartialarts.wufoo.com/forms/student-registration/', :target => '_blank', :class => 'btn'
     .days
       / there is probably a cleaner way to do this
       - if Dir.exist?(config.data_dir)
